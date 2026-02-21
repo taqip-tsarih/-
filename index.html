@@ -524,7 +524,7 @@ class="nav-phone">
 
     </p>
     <div class="cta-group animate__animated animate__zoomIn animate__delay-1s">
-        <a href="#contact" class="btn btn-main"><i class="fas fa-file-signature"></i> اطلب استشارة قانونية الآن</a>
+        <a href="https://wa.me/966568230165" class="btn btn-main"><i class="fas fa-file-signature"></i> اطلب استشارة قانونية الآن</a>
         <a href="https://wa.me/966568230165" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> تواصل مباشرة مع المعقب</a>
     </div>
 </section>    
@@ -593,20 +593,20 @@ class="nav-phone">
             <h2>تواصل مع المعقب الآن </h2>
             <p>املأ النموذج أدناه وسنتصل بك خلال دقائق</p>
         </div>
-        <div class="form-container">
-            <form id="elite-form" action="https://formspree.io/f/xbdadgbn" method="POST">
-                <input type="text" name="name" placeholder="الاسم الكامل" required title="يرجى إدخال اسمك">
-                <input type="tel" name="phone" placeholder="رقم الجوال (05xxxxxxx)" required>
-                <select name="service" required>
-                    <option value="">نوع المعاملة المطلوبة</option>
-                    <option value="تصريح زواج">استخراج تصريح زواج</option>
-                    <option value="تجنيس">تجنيس مواليد</option>
-                    <option value="استشارة">استشارة قانونية / تصحيح أوضاع</option>
-                </select>
-                <textarea name="message" rows="4" placeholder="اشرح لنا حالتك باختصار ليتمكن المعقب من مساعدتك بشكل دقيق"></textarea>
-                <button type="submit" id="submit-btn" class="submit-btn">إرسال الطلب الآن</button>
-            </form>
-        </div>
+       <div class="form-container">
+    <form id="elite-form">
+        <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+        <input type="tel" id="phone" name="phone" placeholder="رقم الجوال (05xxxxxxx)" required>
+        <select id="service" name="service" required>
+            <option value="">نوع المعاملة المطلوبة</option>
+            <option value="تصريح زواج">استخراج تصريح زواج</option>
+            <option value="تجنيس">تجنيس مواليد</option>
+            <option value="استشارة">استشارة قانونية / تصحيح أوضاع</option>
+        </select>
+        <textarea id="message" name="message" rows="4" placeholder="اشرح لنا حالتك باختصار ليتمكن المعقب من مساعدتك بشكل دقيق"></textarea>
+        <button type="button" onclick="sendWhatsApp()" id="submit-btn" class="submit-btn">إرسال عبر واتساب</button>
+    </form>
+</div>
     </section>
 <section class="section" style="padding-top: 0;">
     <div class="section-header">
@@ -688,38 +688,37 @@ class="nav-phone">
         <i class="fab fa-whatsapp" style="font-size: 35px;"></i>
     </a>
 
-    <script>
-        const form = document.getElementById("elite-form");
-        const btn = document.getElementById("submit-btn");
-        const modal = document.getElementById("successModal");
+ <script>
+function sendWhatsApp() {
+    // 1. ضع رقم جوالك هنا بالصيغة الدولية (بدون + وبدون أصفار في البداية)
+    // مثال للسعودية: 9665xxxxxxxx
+    const myNumber ="966568230165"; 
 
-        function closeModal() {
-            modal.style.display = "none";
-        }
+    // 2. جلب البيانات من النموذج
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
 
-        form.onsubmit = function(e) {
-            e.preventDefault();
-            btn.disabled = true;
-            btn.innerHTML = "<i class='fas fa-spinner fa-spin'></i> جاري الإرسال...";
-            const formData = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    modal.style.display = "flex";
-                    form.reset();
-                } else {
-                    alert("عذراً، حدث خطأ أثناء الإرسال.");
-                }
-            }).catch(error => {
-                alert("حدث خطأ في الاتصال.");
-            }).finally(() => {
-                btn.disabled = false;
-                btn.innerHTML = "إرسال الطلب الآن";
-            });
-        };
+    // التحقق من الحقول المطلوبة (بسيط)
+    if (name === "" || phone === "" || service === "") {
+        alert("يرجى ملء جميع الحقول المطلوبة");
+        return;
+    }
+
+    // 3. تنسيق الرسالة
+    const text = `*طلب معاملة جديدة*%0A%0A` +
+                 `*الاسم:* ${name}%0A` +
+                 `*الجوال:* ${phone}%0A` +
+                 `*الخدمة:* ${service}%0A` +
+                 `*التفاصيل:* ${message}`;
+
+    // 4. إنشاء الرابط وفتح واتساب
+    const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
 
         window.onclick = function(event) {
             if (event.target == modal) { closeModal(); }
@@ -763,6 +762,7 @@ document.querySelectorAll('.faq-question').forEach(item => {
         parent.classList.toggle('active');
     });
 });
+
 
     </script>
 </body>
