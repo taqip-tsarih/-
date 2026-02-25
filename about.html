@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | مكتب تعقيب الرياض</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a5f; --accent: #c5a059; --bg-light: #f4f7f9; }
+        body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-light); margin: 0; padding: 0; }
+        
+        .section { padding: 60px 5%; max-width: 1000px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { color: var(--primary); font-size: 2rem; }
+        .section-header div { width: 80px; height: 4px; background: var(--accent); margin: 10px auto; border-radius: 5px; }
+
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+        .faq-question { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; color: var(--primary); }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fff; }
+        .faq-answer p { padding-bottom: 20px; color: #666; line-height: 1.8; margin: 0; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); color: var(--accent); }
+        .faq-item.active { border-right: 5px solid var(--accent); }
+        
+        .back-btn { display: inline-block; margin-top: 30px; text-decoration: none; color: var(--primary); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<section class="section">
+    <div class="section-header">
+        <h2><i class="fas fa-info-circle" style="color: var(--accent);"></i> تعرف على مكتبنا</h2>
+        <div></div>
+    </div>
+    
+    <div class="faq-container">
+        <div class="faq-item active">
+            <div class="faq-question">
+                <span>من هو مكتب معقب تصاريح الزواج بالرياض؟</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>نحن مكتب رائد ومتخصص في تقديم خدمات التعقيب والخدمات العامة في مدينة الرياض، نمتلك خبرة تمتد لسنوات في تسهيل المعاملات الحكومية المعقدة، وخصوصاً معاملات وزارة الداخلية ووزارة العدل.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>ما هي رؤيتنا في تقديم خدمات التعقيب؟</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>رؤيتنا هي أن نكون الجسر الآمن والموثوق بين المواطن والجهات الحكومية، من خلال تقديم حلول قانونية وشرعية 100% تضمن حقوق الأطراف وتختصر الوقت والجهد في استخراج التصارِيح وتوثيق العقود.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>لماذا يفضل العملاء التعامل مع مكتبنا؟</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>يختارنا العملاء لعدة أسباب أهمها: <br>• السرعة الفائقة في الإنجاز.<br>• المعرفة العميقة بالأنظمة والقوانين المحدثة.<br>• السرية التامة في التعامل مع البيانات.<br>• المتابعة المستمرة حتى انتهاء المعاملة.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>ما هي المناطق التي يغطيها المكتب؟</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>رغم أن مقرنا الرئيسي في الرياض، إلا أننا نقدم خدماتنا لجميع المواطنين والمقيمين في كافة أنحاء المملكة العربية السعودية، حيث نعتمد على الأنظمة الإلكترونية الحديثة.</p>
+            </div>
+        </div>
+    </div>
+
+    <center><a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a></center>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
+
