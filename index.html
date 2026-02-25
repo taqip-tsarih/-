@@ -490,6 +490,37 @@ nav {
     border-right: 5px solid var(--accent);
 }
 
+.about-fixed {
+    position: fixed;
+    bottom: 110px; /* فوق زر واتساب */
+    left: 30px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 25px rgba(30, 58, 95, 0.3);
+    z-index: 2000;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 14px;
+}
+.about-fixed:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+@media (max-width: 768px) {
+    .about-fixed {
+        padding: 8px 15px;
+        font-size: 12px;
+        bottom: 105px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -528,18 +559,7 @@ class="nav-phone">
         <a href="https://wa.me/966568230165" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> تواصل مباشرة مع المعقب</a>
     </div>
 </section>    
-<section class="section" style="background-color: #fff;">
-    <div class="section-header">
-        <h2>لماذا تختار مكتبنا لخدمات التعقيب؟</h2>
-        <div></div>
-    </div>
-    <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; text-align: center; color: #444; font-size: 1.1rem; padding: 0 20px;">
-        <p>
-            يعتبر <strong>مكتبنا للتعقيب والخدمات العامة في الرياض</strong> من المكاتب الرائدة والمتخصصة في تسهيل كافة المعاملات الحكومية والقانونية. نحن نمتلك خبرة طويلة كمكتب <strong>معقب تصاريح زواج</strong> معتمد، حيث نساعد المواطنين والمقيمين في <strong>استخراج تصريح زواج سعودي من أجنبية</strong> وتوثيقه رسمياً لدى وزارة العدل.
-            نحن ندرك أهمية الوقت والدقة في معاملات <strong>تجنيس المواليد</strong> و <strong>تصحيح أوضاع الزواج</strong>، لذا نسعى دائماً لتقديم حلول شرعية ونظامية تضمن حقوق جميع الأطراف. سواء كنت تبحث عن <strong>معقب استخراج تصريح زواج</strong> أو مكتب خبير في <strong>توثيق عقود الزواج</strong> وتسهيل إجراءات المواليد، فإن فريقنا في الرياض يخدمكم بكفاءة عالية في كافة مناطق المملكة.
-        </p>
-    </div>
-</section>
+
     <section class="stats-container">
         <div class="stat-item">
             <i class="fas fa-users"></i>
@@ -684,6 +704,11 @@ class="nav-phone">
     
     <p style="opacity: 0.7; font-size: 13px;">جميع الحقوق محفوظة لمكتب التعقيب © 2026</p>
 </footer>
+    <a href="about.html" class="about-fixed" aria-label="تعرف علينا">
+    <i class="fas fa-info-circle"></i>
+    <span>من نحن</span>
+</a>
+
     <a href="https://wa.me/966568230165?text=السلام%20عليكم%20ورحمة%20الله%20وبركاته%20..%20فضلا%20ارغب%20في%20طلب%20إحدى%20خدماتكم"
      class="whatsapp-fixed" target="_blank" aria-label="تواصل معنا عبر واتساب">
         <i class="fab fa-whatsapp" style="font-size: 35px;"></i>
@@ -719,8 +744,8 @@ function sendWhatsApp() {
 
 
         window.onclick = function(event) {
-            if (event.target == modal) { closeModal(); }
-        }
+    if (event.target == document.getElementById('successModal')) { closeModal(); }
+}
 
         const counters = document.querySelectorAll('.counter');
         const speed = 200;
@@ -763,4 +788,3 @@ document.querySelectorAll('.faq-question').forEach(item => {
     </script>
 </body>
 </html>
-
