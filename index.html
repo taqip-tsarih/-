@@ -538,6 +538,131 @@ nav {
         bottom: 105px;
     }
 }
+:root {
+    --primary-color: #1e3a5f;
+    --accent-color: #c5a059;
+    --white: #ffffff;
+}
+
+.main-navbar {
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo .highlight {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* تأثير الخط السفلي عند التمرير */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* إعدادات الجوال */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        display: none; /* مخفي افتراضياً */
+    }
+    .nav-links.active { display: flex; }
+    .nav-btn { display: none; } /* إخفاء زر الكمبيوتر في الجوال */
+    .mobile-only { display: block; }
+}
+/* أضف هذا داخل وسم الـ  */
+.section p a {
+    transition: 0.3s;
+}
+.section p a:hover {
+    color: var(--primary) !important;
+    text-decoration: none !important;
+}
+
 
     </style>
 </head>
@@ -552,17 +677,30 @@ nav {
         </div>
     </div>
 
-    <nav>
-        <a href="#" class="logo-container">
-            <img src="logo.png" alt="شعار مكتب تصريح زواج" class="logo-img">
-            <span class="logo">مكتب تعقيب </span>
-        </a>
-        <a href="https://wa.me/966568230165?text=السلام%20عليكم%20ورحمة%20الله%20وبركاته%20..%20فضلا%20ارغب%20في%20طلب%20إحدى%20خدماتكم"
-class="nav-phone">
-            <i class="fab fa-whatsapp"></i> واتساب 966568230165
-        </a>
-    </nav>
+   <nav class="main-navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-text">مكتب <span class="highlight">تعقيب</span></span>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="marriage-permit.html">تصاريح الزواج</a></li>
+            <li><a href="legal-services.html">خدمات التجنيس</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li class="mobile-only"><a href="https://wa.me/966568230165" class="nav-btn-mobile">تواصل معنا</a></li>
+        </ul>
 
+        <div class="nav-actions">
+            <a href="https://wa.me/966568230165" class="nav-btn">اتصل بنا</a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
     <section class="hero animate__animated animate__fadeIn">
     <h1 class="animate__animated animate__slideInDown">
         ​المكتب الأول في استخراج تصريح زواج وتسهيل كافة تصاريح الزواج للسعوديين من الخارج
@@ -603,24 +741,30 @@ class="nav-phone">
         <div class="section-header">
             <h2><i class="fas fa-star" style="color: var(--accent); font-size: 1.5rem; margin-left: 10px;"></i>خدمات مكتب التعقيب لاستخراج التصاريح وتوثيق العقود
 </h2><a href="#contact" style="color: var(--accent); text-decoration: none; font-weight: bold;">استخراج تصريح زواج</a>
-            <p>تفاصيل إجراءات استخراج تصريح الزواج وتوثيق العقود
-
-​يعمل مكتبنا على تسهيل كافة إجراءات زواج السعودي من أجنبية أو السعودية من أجنبي، بدءاً من تقديم الطلب عبر منصة تعميد ووصولاً إلى المتابعة في إمارة المنطقة المختصة. نحن متخصصون في تسريع معاملات استخراج تصريح زواج من وزارة الداخلية، مع تقديم الاستشارات اللازمة لاستيفاء شروط العمر، السجل الجنائي، والتقرير الطبي.
-​كما نوفر خدماتنا الاحترافية كأفضل معقب تصحيح أوضاع لمن لديهم عقود غير موثقة، حيث نساعدكم في إجراءات توثيق عقد الزواج في محكمة الأحوال الشخصية عبر نظام ناجز التابع لوزارة العدل. وبخصوص العائلات، نولي اهتماماً خاصاً بمعاملات تجنيس المواليد في السعودية وفق المادة الثامنة من نظام الجنسية، ونقوم بإنهاء إجراءات إضافة المواليد واستخراج شهادات الميلاد الرسمية وتعديل المهن عبر الأحوال المدنية. مع مكتبنا، أنت تضمن إنجاز المعاملة بمسار قانوني آمن يوفر عليك عناء البحث والانتظار.
+            <p>
+    تفاصيل إجراءات استخراج تصريح الزواج وتوثيق العقود يعمل مكتبنا على تسهيل كافة إجراءات زواج السعودي من أجنبية، بدءاً من تقديم الطلب عبر منصة تعميد. نحن متخصصون في تسريع معاملات 
+    <a href="marriage-permit.html" style="color: var(--accent); font-weight: bold; text-decoration: underline;">استخراج تصريح زواج</a> 
+    من وزارة الداخلية. كما نولي اهتماماً خاصاً بمعاملات 
+    <a href="legal-services.html" style="color: var(--accent); font-weight: bold; text-decoration: underline;">تجنيس المواليد في السعودية</a> 
+    وفق المادة الثامنة من نظام الجنسية، ونقوم بإنهاء إجراءات إضافة المواليد واستخراج شهادات الميلاد الرسمية.
 </p>
+
             <div></div>
         </div>
-        <div class="services-grid">
+        <div class="service-card">
+    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="استخراج تصريح زواج" class="service-img">
+    <h3><a href="marriage-permit.html" style="text-decoration: none; color: inherit;">تصاريح الزواج</a></h3>
+    <p>نساعدك في استخراج تصريح زواج سعودي من أجنبية بأسرع وقت.</p>
+    <a href="marriage-permit.html" style="color: var(--accent); font-weight: bold; text-decoration: none; display: block; margin-top: 10px;">التفاصيل الكاملة ←</a>
+</div>
+
             <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" alt="استخراج تصريح زواج سعودي من أجنبية" class="service-img">
-                <h3>تصاريح الزواج</h3>
-                <p>نساعدك في استخراج تصريح زواج سعودي من أجنبية والعكس بأسرع وقت وفق الضوابط الشرعية والقانونية.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1591622414912-34f2a8f8172e?auto=format&fit=crop&w=600&q=80" alt="إجراءات استخراج تصاريح زواج وتجنيس المواليد" class="service-img">
-                <h3>تجنيس المواليد</h3>
-                <p>متابعة دقيقة وشاملة لكافة إجراءات تجنيس المواليد في المملكة العربية السعودية بكل احترافية.</p>
-            </div>
+    <img src="https://images.unsplash.com/photo-1591622414912-34f2a8f8172e?auto=format&fit=crop&w=600&q=80" alt="تجنيس المواليد" class="service-img">
+    <h3><a href="legal-services.html" style="text-decoration: none; color: inherit;">تجنيس المواليد</a></h3>
+    <p>متابعة دقيقة لكافة إجراءات تجنيس المواليد في المملكة العربية السعودية.</p>
+    <a href="legal-services.html" style="color: var(--accent); font-weight: bold; text-decoration: none; display: block; margin-top: 10px;">التفاصيل الكاملة ←</a>
+</div>
+
             <div class="service-card">
                 <img src="mmoo.jpeg" alt="معقب تصريح زواج في الرياض يقوم بتوثيق عقد زواج سعودي من أجنبية" class="service-img">
 
@@ -749,6 +893,113 @@ class="nav-phone">
         </div>
     </div>
 </section>
+<style>
+    /* تنسيق خريطة الموقع والفوتر */
+    footer {
+        background-color: var(--primary);
+        color: white;
+        padding: 50px 5% 20px;
+        margin-top: 50px;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .footer-section h4 {
+        color: var(--accent);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .footer-section h4::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--accent);
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: #d1d8e0;
+        text-decoration: none;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-links a:hover {
+        color: var(--accent);
+        padding-right: 5px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.9rem;
+        color: #a0aec0;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container { text-align: center; }
+        .footer-section h4::after { right: 50%; transform: translateX(50%); }
+        .footer-links a { justify-content: center; }
+    }
+</style>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>مكتب الإنجاز المعتمد</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: #d1d8e0;">
+                خيارك الأول لتعقيب واستخراج تصاريح الزواج في كافة أنحاء المملكة بأمان وسرية تامة.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>خريطة الموقع</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                <li><a href="#"><i class="fas fa-concierge-bell"></i> خدماتنا</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> الأسئلة الشائعة</a></li>
+                <li><a href="https://wa.me/966568230165"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>خدماتنا السريعة</h4>
+            <ul class="footer-links">
+                <li><a href="marriage-permit.html">تصريح زواج من الخارج</a></li>
+                <li><a href="marriage-permit.html">توثيق عقود الزواج</a></li>
+                <li><a href="#">استشارات قانونية</a></li>
+                <li><a href="legal-services.html">تصحيح أوضاع</a></li>
+            </ul>
+        </div>
+    </div>
+
+  
 
     <footer style="background: #0a192f; color: white; text-align: center; padding: 40px 5%; border-top: 4px solid var(--accent);">
     <div style="margin-bottom: 15px;">
@@ -848,6 +1099,12 @@ document.querySelectorAll('.faq-question').forEach(item => {
         parent.classList.toggle('active');
     });
 });
+
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+}
     </script>
+    
 </body>
 </html>
