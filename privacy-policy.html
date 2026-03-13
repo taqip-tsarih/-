@@ -3,9 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية | مكتب التعقيب والخدمات العامة</title>
+     <title>تصريح زواج | خصوصية البيانات وضمان سرية معاملات الزواج والتجنيس</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+    --primary-color: #1e3a5f;
+    --accent-color: #c5a059;
+    --white: #ffffff;
+}
+
+.main-navbar {
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo .highlight {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* تأثير الخط السفلي عند التمرير */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* إعدادات الجوال */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        display: none; /* مخفي افتراضياً */
+    }
+    .nav-links.active { display: flex; }
+    .nav-btn { display: none; } /* إخفاء زر الكمبيوتر في الجوال */
+    .mobile-only { display: block; }
+}
+/* أضف هذا داخل وسم الـ  */
+.section p a {
+    transition: 0.3s;
+}
+.section p a:hover {
+    color: var(--primary) !important;
+    text-decoration: none !important;
+}
+
         :root {
             --primary: #1e3a5f;
             --accent: #c5a059;
@@ -28,6 +154,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
+        
         h1 {
             color: var(--primary);
             border-bottom: 3px solid var(--accent);
@@ -54,12 +181,38 @@
             color: var(--accent);
             font-weight: bold;
         }
+        
     </style>
 </head>
 <body>
+<nav class="main-navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-text">مكتب <span class="highlight">معقب تصاريح</span></span>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="marriage-permit.html">تصاريح الزواج</a></li>
+            <li><a href="legal-services.html">خدمات التجنيس</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li class="mobile-only"><a href="https://wa.me/966568230165" class="nav-btn-mobile">تواصل معنا</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="https://wa.me/966568230165" class="nav-btn">اتصل بنا</a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <div class="container">
-    <h1>سياسة الخصوصية</h1>
+    <h1>تصريح زواج | خصوصية البيانات وضمان سرية معاملات الزواج والتجنيس</h1>
+   
     <p>في مكتب إستشارات المعاملات  (https://taqip-tsarih.com/)، نولي أهمية قصوى لخصوصية زوارنا. توضح هذه الوثيقة أنواع المعلومات الشخصية التي نجمعها وكيفية استخدامها.</p>
 
     <h2>1. المعلومات التي نجمعها</h2>
@@ -165,12 +318,19 @@
         .footer-section h4::after { right: 50%; transform: translateX(50%); }
         .footer-links a { justify-content: center; }
     }
-</style>
+     .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #FFF; border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 10px 25px rgba(37,211,102,0.3); z-index: 1000; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
 
+        @media (max-width: 768px) { header h1 { font-size: 1.8rem; } .main-content { padding: 25px; } }
+</style>
+<a href="https://wa.me/966568230165" class="whatsapp-float" target="_blank">
+    <span>مراسلة المعقب الآن</span>
+    <i class="fab fa-whatsapp"></i>
+</a>
 <footer>
     <div class="footer-container">
         <div class="footer-section">
-            <h4>مكتب تعقيب المعتمد</h4>
+            <h4>مكتب معقب تصاريح المعتمد</h4>
             <p style="font-size: 0.9rem; line-height: 1.6; color: #d1d8e0;">
                 خيارك الأول لتعقيب واستخراج تصاريح الزواج في كافة أنحاء المملكة بأمان وسرية تامة.
             </p>
@@ -192,17 +352,20 @@
             <ul class="footer-links">
                 <li><a href="marriage-permit.html">تصريح زواج من الخارج</a></li>
                 <li><a href="marriage-permit.html">توثيق عقود الزواج</a></li>
-                <li><a href="#">استشارات قانونية</a></li>
+                <li><a href="index.html">استشارات قانونية</a></li>
                 <li><a href="legal-services.html">تصحيح أوضاع</a></li>
             </ul>
         </div>
     </div>
 
     <div class="copyright">
-        <p>جميع الحقوق محفوظة &copy; 2026 مكتب تعقيب للتعقيب</p>
+        <p>جميع الحقوق محفوظة &copy; 2026 مكتب معقب تصاريح زواج </p>
     </div>
 </footer>
-
+<script>function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+}</script>
 </body>
 </html>
 
