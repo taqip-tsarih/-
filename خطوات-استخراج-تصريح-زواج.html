@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Enjaz-Office.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root { --primary-color: #1a5d1a; --accent-gold: #d4af37; --bg-light: #f0f2f5; --text-main: #2c3e50; }
         body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-light); color: var(--text-main); margin: 0; line-height: 1.8; }
@@ -20,10 +21,116 @@
        .container { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         h2 { color: var(--primary-color); border-right: 4px solid var(--accent-gold); padding-right: 15px; margin-top: 30px; }
         
-        /* الفوتر */
-        footer { background-color: #004d00; color: #ffffff; text-align: center; padding: 40px 20px; margin-top: 50px; border-top-left-radius: 50px; border-top-right-radius: 50px; }
-        footer a { color: #ffd700 !important; text-decoration: none; font-weight: 700; }
-        
+        /* تنسيق الفوتر المطور */
+footer {
+    background: linear-gradient(145deg, #0a251a 0%, #004d00 100%);
+    color: white;
+    padding: 60px 20px 30px;
+    margin-top: 50px;
+    border-top: 4px solid #ffd700; /* خط ذهبي رفيع في الأعلى */
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: right;
+}
+
+.footer-column h4 {
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: #ffd700;
+}
+
+.footer-column p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    padding-right: 10px;
+}
+
+/* أزرار التواصل الاجتماعي */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.social-icon:hover {
+    background: #ffd700;
+    color: #004d00;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* تنسيق خاص للجوال */
+@media (max-width: 600px) {
+    .footer-container { text-align: center; }
+    .footer-column h4::after { right: 50%; transform: translateX(50%); }
+    .footer-links a { justify-content: center; }
+    .social-icons { justify-content: center; }
+}
+
         /* واتساب */
         .whatsapp-float { position: fixed; bottom: 25px; left: 25px; background-color: #25d366; border-radius: 50px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
         .whatsapp-float img { width: 35px; height: 35px; }
@@ -85,7 +192,7 @@
 <p><span style="font-weight: 400;">لا تكتفي بتقديم الطلب وانتظار الرد عبر رسالة نصية أو مكالمة هاتفية. منصة أبشر توفر لك إمكانية متابعة حالة الطلب أولاً بأول، كما تمكنك من معرفة أي ملاحظات أو متطلبات إضافية تحتاج لتقديمها. هذه المتابعة المستمرة تمكنك من حل أي مشكلة قد تظهر بسرعة قبل أن تتفاقم وتؤخر المعاملة لأشهر.</span></p>
 <p><span style="font-weight: 400;">كما ننصحك بتفعيل التنبيهات عبر رسائل الجوال، فهذه الخدمة ترسل لك إشعاراً فورياً عند وجود أي تطور في طلبك. بعض المتقدمين يفاجؤون بمرور أشهر دون رد، بينما الحقيقة أن طلبهم كان بحاجة لتقديم مستند إضافي لكنهم لم يعلموا بذلك لعدم متابعتهم المنصة الإلكترونية.</span></p>
 <h3><b>التعامل مع مكاتب الخدمات والمعقبين</b></h3>
-<p><span style="font-weight: 400;">قد تحتاج في بعض مراحل خطوات استخراج تصريح زواج إلى <a href="https://alkhaalij.com/contact/"><strong>الاستعانة بمكتب خدمات أو معقب</strong></a> لإنهاء بعض الإجراءات بسرعة، خاصة إذا كنت مشغولاً ولا تستطيع مراجعة الدوائر الحكومية بنفسك. لكن احذر، فاختيار المكتب المناسب أمر بالغ الأهمية. ابحث عن المكاتب المرخصة والمعروفة بسمعتها الطيبة، ولا تتعامل مع أي شخص يعرض عليك إنهاء المعاملة بطرق غير نظامية مقابل مبالغ كبيرة.</span></p>
+<p><span style="font-weight: 400;">قد تحتاج في بعض مراحل خطوات استخراج تصريح زواج إلى <a href="https://taqip-tsarih.com/contact/"><strong>الاستعانة بمكتب خدمات أو معقب</strong></a> لإنهاء بعض الإجراءات بسرعة، خاصة إذا كنت مشغولاً ولا تستطيع مراجعة الدوائر الحكومية بنفسك. لكن احذر، فاختيار المكتب المناسب أمر بالغ الأهمية. ابحث عن المكاتب المرخصة والمعروفة بسمعتها الطيبة، ولا تتعامل مع أي شخص يعرض عليك إنهاء المعاملة بطرق غير نظامية مقابل مبالغ كبيرة.</span></p>
 <p><span style="font-weight: 400;">قبل التعاقد مع أي مكتب، تأكد من أن لديه خبرة في هذا النوع من المعاملات تحديداً، واسأل عن نماذج لمعاملات سابقة أنجزها بنجاح. أيضاً، احرص على توثيق الاتفاق بينك وبينهم كتابةً، وتفصيل المبالغ المطلوبة والخدمات التي سيقدمونها. هذا يحميك من أي استغلال أو مفاجآت غير سارة لاحقاً.</span></p>
 <h2><b>الأخطاء الشائعة التي يقع فيها المتقدمون</b></h2>
 <p><span style="font-weight: 400;">خلال سنوات من العمل في هذا المجال ومتابعة آلاف المعاملات، لاحظنا أن هناك أخطاء متكررة يقع فيها معظم المتقدمين عند الشروع في خطوات استخراج تصريح زواج. بعض هذه الأخطاء بسيط ويمكن تداركه، لكن البعض الآخر قد يؤدي إلى رفض الطلب تماماً أو تأخيره لسنوات. في هذا القسم، سنسلط الضوء على أشهر هذه الأخطاء حتى تتجنبها تماماً في رحلتك.</span></p>
@@ -121,24 +228,77 @@
 </div>
 
 <footer>
-    <div style="margin-bottom: 20px;">
-        <h4 style="color: #ffd700; margin-bottom: 15px;">روابط سريعة</h4>
-        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="index.html#services">خدماتنا</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
-            <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
-            <li><a href="contact.html">تواصل معنا</a></li>
-        </ul>
-    </div>
-    <p>نخدمكم في كافة أنحاء المملكة العربية السعودية 🇸🇦</p>
-    <p>مكتب تعقيب  تصاريح زواج سعودي خبير في كافة مناطق المملكه</p>
-</footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>مكتب تعقيب خبير</h4>
+            <p>نحن شريكك الموثوق في المملكة العربية السعودية لإنجاز كافة المعاملات الحكومية وتصاريح الزواج والتجنيس بأعلى معايير السرعة والسرية التامة.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/966568230165" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+966568230165" class="social-icon"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
 
+        <div class="footer-column">
+            <h4>روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="index.html#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                <li><a href="index.html#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
+                <li><a href="privacy-policy.html"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a></li>
+                <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>بيانات التواصل</h4>
+            <ul class="footer-links">
+                <li><a href="tel:+966568230165"><i class="fas fa-phone-alt"></i> 966568230165+</a></li>
+                <li><a href="https://wa.me/966568230165"><i class="fab fa-whatsapp"></i> خدمة العملاء (واتساب)</a></li>
+                <li><p style="margin:0;"><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية - الرياض - جدة - مكة</p></li>
+                <li><p style="margin:0;"><i class="fas fa-clock"></i> متاحون لخدمتكم على مدار 24 ساعة</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+    
+        <p>جميع الحقوق محفوظة &copy; 2026 | تصميم وتطوير مكتب تعقيب</p>
+    </div>
+</footer>
 
 <a href="https://wa.me/966568230165" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+<style>.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.whatsapp-float img { width: 30px; height: 30px; display: block; }
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float {
+    animation: shadow-pulse 2s infinite;
+}
+@keyframes shadow-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.4); }
+    100% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn {
+    animation: shadow-pulse 2s infinite;
+}
+@keyframes shadow-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.4); }
+    100% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+}
+</style>
 </body>
 </html>
 
