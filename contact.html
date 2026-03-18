@@ -32,8 +32,217 @@
         .contact-info { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
         .contact-info a { color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 1.2rem; display: block; margin: 10px 0; }
 
-        footer { background-color: #004d00; color: #ffffff; text-align: center; padding: 40px 20px; margin-top: 50px; border-top-left-radius: 50px; border-top-right-radius: 50px; }
-        footer a { color: #ffd700 !important; text-decoration: none; font-weight: 700; }
+        /* تنسيق الفوتر المطور */
+footer {
+    background: linear-gradient(145deg, #0a251a 0%, #004d00 100%);
+    color: white;
+    padding: 60px 20px 30px;
+    margin-top: 50px;
+    border-top: 4px solid #ffd700; /* خط ذهبي رفيع في الأعلى */
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: right;
+}
+
+.footer-column h4 {
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: #ffd700;
+}
+
+.footer-column p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    padding-right: 10px;
+}
+
+/* أزرار التواصل الاجتماعي */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.social-icon:hover {
+    background: #ffd700;
+    color: #004d00;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* تنسيق خاص للجوال */
+@media (max-width: 600px) {
+    .footer-container { text-align: center; }
+    .footer-column h4::after { right: 50%; transform: translateX(50%); }
+    .footer-links a { justify-content: center; }
+    .social-icons { justify-content: center; }
+}
+
+        
+        /* تنسيق نموذج التواصل المطور */
+.contact-section-bg {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 40px auto;
+    border-top: 6px solid var(--primary-color);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* تنسيق الحقول */
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    background: #fdfdfd;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(26, 93, 26, 0.1);
+}
+
+/* الزر النابض */
+.whatsapp-submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-submit-btn:hover {
+    background: #1eb954;
+    transform: translateY(-3px);
+}
+
+/* للجوال: جعل الحقول تحت بعضها */
+@media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; }
+}
+
     </style>
 </head>
 <body>
@@ -42,76 +251,121 @@
     <h1>تواصل معنا</h1>
 </header>
 
-<div class="container">
-    <p style="text-align: center; margin-bottom: 30px;">املأ البيانات أدناه، وسننتقل بك مباشرة إلى واتساب لإرسال استفسارك:</p>
-    
+<section class="contact-section-bg">
+    <div class="form-header">
+        <h3>أرسل استفسارك الآن</h3>
+        <p>نحن هنا لمساعدتك، املأ البيانات وسنتواصل معك فوراً</p>
+    </div>
+
     <form id="whatsappForm">
-        <div class="form-group">
-            <label>الاسم الكريم</label>
-            <input type="text" id="name" placeholder="اكتب اسمك هنا" required>
+        <div class="form-grid">
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> الاسم الكريم</label>
+                <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
+            </div>
+            
+            <div class="input-group">
+                <label><i class="fas fa-phone"></i> رقم الجوال</label>
+                <input type="tel" id="phone" placeholder="9665xxxxxxxx" required>
+            </div>
         </div>
-        <div class="form-group">
-            <label>رقم الجوال</label>
-            <input type="tel" id="phone" placeholder="9665xxxxxxxx" required>
-        </div>
-        <div class="form-group">
-            <label>نوع الخدمة المطلوبة</label>
-            <select id="service" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px;">
-                <option value="تصريح زواج">تصريح زواج</option>
-                <option value="تخليص معاملات ">تخليص معاملات</option>
-                <option value="تجنيس">تجنيس</option>
-                <option value="تعميد خدمات">تعميد خدمات</option>
-                <option value="أخرى">أخرى</option>
+
+        <div class="input-group">
+            <label><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة</label>
+            <select id="service">
+                <option value="تصريح زواج من أجنبية">تصريح زواج من أجنبية</option>
+                <option value="معاملة تجنيس">معاملة تجنيس</option>
+                <option value="تصحيح أوضاع قانونية">تصحيح أوضاع قانونية</option>
+                <option value="استشارة قانونية">استشارة قانونية مجانية</option>
+                <option value="أخرى">خدمة أخرى</option>
             </select>
         </div>
-        <div class="form-group">
-            <label>نص الاستفسار</label>
-            <textarea id="message" rows="4" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+
+        <div class="input-group">
+            <label><i class="fas fa-envelope-open-text"></i> تفاصيل استفسارك</label>
+            <textarea id="message" rows="4" placeholder="اكتب استفسارك هنا بكل وضوح لنسهل عليك الإجراءات..."></textarea>
         </div>
-        <button type="button" class="submit-btn" onclick="sendToWhatsApp()">إرسال الاستفسار عبر واتساب 📱</button>
+
+        <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
+            <i class="fab fa-whatsapp"></i> إرسال عبر واتساب 
+        </button>
     </form>
-</div>
+</section>
 
 
 
 <footer>
-    <div style="margin-bottom: 20px;">
-        <h4 style="color: #ffd700; margin-bottom: 15px;">روابط سريعة</h4>
-        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="index.html#services">خدماتنا</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
-            <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
-            <li><a href="contact.html">تواصل معنا</a></li>
-        </ul>
-    </div>
-    <p>نخدمكم في كافة أنحاء المملكة العربية السعودية 🇸🇦</p>
-    <p>مكتب تعقيب تصاريح زواج سعودي خبير في كافة مناطق المملكه</p>
-</footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>مكتب تعقيب خبير</h4>
+            <p>نحن شريكك الموثوق في المملكة العربية السعودية لإنجاز كافة المعاملات الحكومية وتصاريح الزواج والتجنيس بأعلى معايير السرعة والسرية التامة.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/966568230165" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+966568230165" class="social-icon"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
 
+        <div class="footer-column">
+            <h4>روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="index.html#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                <li><a href="index.html#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
+                <li><a href="privacy-policy.html"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a></li>
+                <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>بيانات التواصل</h4>
+            <ul class="footer-links">
+                <li><a href="tel:+966568230165"><i class="fas fa-phone-alt"></i> 966568230165+</a></li>
+                <li><a href="https://wa.me/966568230165"><i class="fab fa-whatsapp"></i> خدمة العملاء (واتساب)</a></li>
+                <li><p style="margin:0;"><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية - الرياض - جدة - مكة</p></li>
+                <li><p style="margin:0;"><i class="fas fa-clock"></i> متاحون لخدمتكم على مدار 24 ساعة</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+    
+        <p>جميع الحقوق محفوظة &copy; 2026 | تصميم وتطوير مكتب تعقيب</p>
+    </div>
+</footer>
 <script>
     function sendToWhatsApp() {
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        // رقم الواتساب الخاص بك
-        const ownerNumber = "966568230165";
-        
-        // صياغة الرسالة
-        const whatsappMessage = `*رسالة جديدة من موقع مكتب إنجاز*%0A%0A` +
-                                `*الاسم:* ${name}%0A` +
-                                `*رقم الجوال:* ${phone}%0A` +
-                                `*الخدمة المطلوبة:* ${service}%0A` +
-                                `*الاستفسار:* ${message}`;
-        
-        // رابط الواتساب
-        const url = `https://wa.me/${ownerNumber}?text=${whatsappMessage}`;
-        
-        // فتح الرابط
-        window.open(url, '_blank');
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    if(!name || !phone) {
+        alert("يرجى ملء الاسم ورقم الجوال أولاً");
+        return;
     }
+
+    const ownerNumber = "966568230165";
+    
+    // استخدام رموز الإيموجي مباشرة مع التأكد من ترميز النص كاملاً
+    const textPart = 
+        `*طلب جديد من الموقع 📥* \n` +
+        `-------------------------- \n` +
+        `*👤 الاسم:* ${name} \n` +
+        `*📱 الجوال:* ${phone} \n` +
+        `*🛠 الخدمة:* ${service} \n` +
+        `*📝 الاستفسار:* ${message} \n` +
+        `-------------------------- \n` +
+        `*المصدر:* موقع مكتب التعقيب الرسمي`;
+
+    // تحويل النص بالكامل إلى صيغة تفهمها الروابط (encodeURIComponent)
+    const encodedMessage = encodeURIComponent(textPart);
+
+    const url = `https://wa.me/${ownerNumber}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+}
+
 </script>
 
 </body>
