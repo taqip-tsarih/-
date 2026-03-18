@@ -48,9 +48,9 @@
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 60px 15px;              /* زيادة الـ padding قليلاً لتتناسب مع أبعاد صورتك */
+    padding: 60px 20px;              /* زيادة الـ padding قليلاً لتتناسب مع أبعاد صورتك */
     position: relative;
-    clip-path: ellipse(120% 100% at 50% 0%); /* تحسين شكل الـ clip-path ليناسب الصورة */
+    clip-path: ellipse(1000% 100% at 50% 0%); /* تحسين شكل الـ clip-path ليناسب الصورة */
 }
 
 /* طبقة تعتيم لضمان وضوح النص فوق الصورة */
@@ -67,12 +67,12 @@ header h1, header p {
     color: #ffffff; /* اللون الأبيض ليبرز فوق الصورة */
     position: relative;
     z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.20); /* إضافة ظل للنص لزيادة الوضوح */
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.20); /* إضافة ظل للنص لزيادة الوضوح */
 }
 
 
-    header h1 { font-weight: 800; font-size: 2.2rem; margin: 0; }
-    header p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
+    header h1 { font-weight: 800; font-size: 1.7rem; margin: 0; }
+    header p { font-size: 1.7rem; opacity: 0.9; margin-top: 10px; }
 
 
 
@@ -81,24 +81,26 @@ header h2, header p {
     color: #ffffff; /* اللون الأبيض ليبرز فوق الصورة */
     position: relative;
     z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* إضافة ظل للنص لزيادة الوضوح */
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5); /* إضافة ظل للنص لزيادة الوضوح */
 }
 
 
-    header h2 { font-weight: 800; font-size: 2.2rem; margin: 0; }
+    header h2 { font-weight: 800; font-size: 1.7rem; margin: 0; }
     header h2 { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
 
 
-    .container { max-width: 850px; margin: -50px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+    .container { max-width: 850px; margin: 0px auto 0px; padding: 0px; position: relative; z-index: 10; }
+
+ .containr { max-width: 850px; margin: 0px auto 0px; padding: 5px; position: relative; z-index: 10; }
 
     /* قسم المقالة */
     .intro-article {
         background: var(--white);
         padding: 30px;
-        border-radius: 20px;
+        border-radius: 0px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         margin-bottom: 30px;
-        border-bottom: 4px solid #004d00;
+        border-bottom: 0px solid #004d00;
     }
 
     .intro-article h2 { color: var(--primary-color); font-size: 1.5rem; margin-top: 0; }
@@ -134,9 +136,9 @@ header h2, header p {
 
 .service-item {
     background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
+    border-radius: 0px;
+    box-shadow: 0px 0px rgba(0,0,0,0.05);
+    border: 0px solid #eee;
     padding: 30px; /* تقليل الـ padding */
     text-align: lift;
     transition: transform 0.3s ease;
@@ -149,8 +151,8 @@ header h2, header p {
 
  .service-icon img {
     /* تكبير حجم الصورة قليلاً لتكون أكثر وضوحاً */
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
     
     /* جعلها دائرية */
     border-radius: 10%;
@@ -220,57 +222,114 @@ header h2, header p {
         box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    footer {
-    background-color: #004d00;
-    color: #ffffff;
-    text-align: center;
+    /* تنسيق الفوتر المطور */
+footer {
+    background: linear-gradient(145deg, #0a251a 0%, #004d00 100%);
+    color: white;
     padding: 60px 20px 30px;
     margin-top: 50px;
-    /* هذا هو سر الشكل الجذاب: انحناء من الأعلى */
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    /* ظل خفيف يعطي إيحاء بأن الفوتر طافٍ قليلاً */
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+    border-top: 4px solid #ffd700; /* خط ذهبي رفيع في الأعلى */
     position: relative;
 }
 
-/* إضافة خط ذهبي رفيع في الأعلى لزيادة الفخامة */
-footer::before {
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: right;
+}
+
+.footer-column h4 {
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 20%;
-    right: 20%;
-    height: 3px;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
     background: #ffd700;
-    border-radius: 5px;
 }
 
-footer h4 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+.footer-column p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #e0e0e0;
 }
 
-footer ul {
+.footer-links {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
 }
 
-footer a {
-    color: #ffd700 !important;
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 700;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-footer a:hover {
-    color: #ffffff !important;
+.footer-links a:hover {
+    color: #ffd700;
+    padding-right: 10px;
+}
+
+/* أزرار التواصل الاجتماعي */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.social-icon:hover {
+    background: #ffd700;
+    color: #004d00;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* تنسيق خاص للجوال */
+@media (max-width: 600px) {
+    .footer-container { text-align: center; }
+    .footer-column h4::after { right: 50%; transform: translateX(50%); }
+    .footer-links a { justify-content: center; }
+    .social-icons { justify-content: center; }
 }
 
 
@@ -370,271 +429,770 @@ footer a:hover {
     margin-bottom: 15px;
 }
 
- /* العدادات */
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            background:white;
-            padding: 60px 5%;
-            color: #004d00;
-            text-align: center;
+ /* تنسيق مطور لقسم العدادات */
+.stats-section {
+    background: linear-gradient(135deg, #004d00 0%, #0a251a 100%);
+    padding: 60px 0;
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة لمسة فنية في الخلفية */
+.stats-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    opacity: 0.1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-card {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: #ffd700; /* اللون الذهبي للأيقونات */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stat-card h3 {
+    font-size: 3rem;
+    margin: 10px 0;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.stat-card p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* خط فاصل صغير تحت الرقم */
+.stat-card::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #ffd700;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+
+.servic-icon img {
+    /* تكبير حجم الصورة قليلاً لتكون أكثر وضوحاً */
+    width: 260px;
+    height: 260px;
+    
+    /* جعلها دائرية */
+    border-radius: 10%;
+    
+    /* إضافة حدود بيضاء سميكة لتعطي فخامة */
+    border: 1px solid white;
+    
+    /* استخدام cover لضمان ملء المساحة دون تشوه */
+    object-fit: cover;
+    
+    /* إضافة ظل ناعم حول الصورة لجعلها تبدو بارزة عن البطاقة */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    
+    /* إضافة انتقال انسيابي عند التفاعل (اختياري) */
+    transition: transform 0.3s ease;
+    
+    margin-bottom: 15px;
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* تأثير بسيط عند تمرير الفأرة (Hover) لجعلها تبدو تفاعلية */
+.service-icon img:hover {
+    transform: scale(1.05);
+}
+
+
+
+ 
+        .contact-container {
+            display: flex;
+            gap: 10px; /* المسافة بين الزرين */
+            justify-content: center; /* توسيط الأزرار */
+            padding: 5px;
         }
-        .stat-item i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
-        .stat-item h3 { font-size: 2.8rem; color: #004d00; margin-bottom: 5px; font-weight: 800; }
-        .stat-item p { font-size: 1.2rem; opacity: 0.8; margin: 0; }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 5px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            flex: 1; /* لجعل الزرين بنفس العرض */
+            max-width: 200px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp {
+            background-color: #004d00;
+        }
+
+        .call {
+            background-color: #004d00;
+        }
+
+        /* تنسيق بسيط للأيقونة التعبيرية */
+        .icon {
+            margin-left: 0px;
+        }
+    
+  /* تنسيق قسم المدونة المطور - نسخة آمنة وحل مشكلة الصور */
+.blog-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.blog-grid {
+    display: grid;
+    /* تحديد عرض البطاقات ليكون مناسباً ولا يخرج عن الشاشة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* إضافة overflow: hidden للحاوية الرئيسية لضمان عدم خروج أي شيء */
+    overflow: hidden; 
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 20px;
+    /* هذا الأمر ضروري جداً لمنع أي محتوى داخلي من الخروج عن حدود البطاقة */
+    overflow: hidden; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    /* التأكد من أن البطاقة لا تتجاوز عرض الشاشة */
+    max-width: 100%; 
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(26, 93, 26, 0.12);
+}
+
+/* التنسيق الجديد والآمن لصورة المدونة */
+.blog-thumb {
+    /* تجبر الصورة على أخذ 100% من عرض البطاقة فقط */
+    width: 100% !important; 
+    /* تحديد ارتفاع ثابت ومناسب للصورة */
+    height: 200px !important; 
+    /* أهم أمر: يجعل الصورة تتأقلم داخل المساحة دون أن تمط أو تخرج */
+    object-fit: cover !important; 
+    border-bottom: 3px solid var(--primary-color);
+    /* إلغاء أي هوامش قديمة قد تسبب المشكلة */
+    margin: 0 !important; 
+    display: block !important;
+}
+
+.blog-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-category {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    /* لمنع العناوين الطويلة جداً من كسر التنسيق */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-excerpt {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.7;
+     /* تحديد عدد الأسطر للملخص */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-meta {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    color: var(--accent-gold);
+}
+
+/* تنسيق خاص للهواتف لضمان عدم خروج الصور عن الشاشة */
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* عمود واحد فقط في الجوال */
+        padding: 0 10px;
+    }
+    
+    .blog-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* تنسيق سحابة كلمات البحث */
+.keywords-section {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.keyword-tag {
+    background: #f0f4f0;
+    color: #1a5d1a;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid #e0eee0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.keyword-tag:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* تنسيق قسم آراء العملاء الفخم */
+.testimonials-section {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+}
+
+.testimonials-grid {
+    display: flex; /* حولناه إلى flex لسهولة التوسط */
+    flex-wrap: wrap; /* للسماح للبطاقات بالنزول تحت بعضها في الجوال */
+    justify-content: center; /* هذا هو السر الذي يجعلها في المنتصف */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 80px auto 0; /* التوسيط الخارجي */
+}
+
+
+.testimonial-card-v2 {
+    background: white;
+    padding: 30px 30px;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    border-bottom: 5px solid var(--accent-gold);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.testimonial-card-v2:hover {
+    transform: translateY(-10px);
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #ffd700;
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.client-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: -80px auto 20px; /* لرفع الصورة نصفها خارج الكارد */
+    object-fit: cover;
+    background: #eee;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.client-name {
+    display: block;
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.client-stars {
+    color: #ffd700;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+
+
+/* تنسيق نموذج التواصل المطور */
+.contact-section-bg {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 40px auto;
+    border-top: 6px solid var(--primary-color);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* تنسيق الحقول */
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    background: #fdfdfd;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(26, 93, 26, 0.1);
+}
+
+/* الزر النابض */
+.whatsapp-submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-submit-btn:hover {
+    background: #1eb954;
+    transform: translateY(-3px);
+}
+
+/* للجوال: جعل الحقول تحت بعضها */
+@media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; }
+}
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body>
-<div class="top-bar">
-    <span>📍 نخدم جميع مناطق المملكة</span>
-    <span>📞 568230165</span>
-</div>
-<style>
-.top-bar { background: #004d00; color: white; text-align: center; font-size: 0.8rem; padding: 5px; font-weight: bold; }
-</style>
 
 <header>
-    
-<h1>مكتب تعقيب</h1>
-  <h2>
+    <div style="margin-bottom: 20px;">
+        <p style="color:  #ffd700; margin-bottom: 15px;">أهلاً بكم</p>
+<h1>مكتب تعقيب
+  
         يتم انجاز معاملتك وانت في مكانك في اي مكان كنت في المملكة العربية السعودية
-        </h2>
-    <p>
+        
+    </h1>
+    <h2>
 مكتب تخليص معاملات نحن في مكتب تعقيب الخدمات المعاملات الحكومية نوفر لك كل خدمات التعقيب التي تحتاج اليها في مكان واحد من معاملات تصاريح زواج من اجنبية او مقيمة من الداخل او من الخارج ومتابعة كافة خدمات التجنيس بحترافية عالية في العمل ودراية قانونية في قانون التجنس على يد افضل محامين التجنيس بمكة ، اتصل الان واحصل على استشاره مجانية
         
-</p>
+</h2>
  </header>
 
 <div class="container">
-    
     <div class="intro-article">
-        <h2>حلولنا المتكاملة لإنجاز معاملاتكم</h2>
-        <p>
-            في ظل التحول الرقمي السريع الذي تشهده المملكة العربية السعودية، أصبحت المعاملات الحكومية تتطلب دقة عالية وإلماماً تاماً بالأنظمة المحدثة عبر منصات تعميد، أبشر، ومساند. هنا يأتي دورنا في <strong>مكتب تعقيب | معقب تصاريح زواج سعودي خبير في كافة مناطق المملكه</strong>، لنكون الجسر الذي يربطكم بالإنجاز السريع والمضمون. نحن لا نكتفي بتقديم الخدمة، بل نضمن لك الالتزام التام بالأنظمة واللوائح، مع تقديم حلول مبتكرة لتجاوز كافة التحديات الإجرائية.
-        </p>
-    </div>
-
-    <div class="highlight-box">
-        🛑 مع مكتب تعقيب | معاملتك بين يديك في أيام 🛑
-    </div>
-    
-    
-<div class="contact-card">
-        <h3>هل لديك معاملة صعبة؟</h3>
-        <p>لا تشيل هم.. مكتب تعقيب ينجزها لك</p>
-        <a href="https://wa.me/966568230165" class="whatsapp-btn">
-             تواصل واتساب الآن 📱
-        </a>
-        <div style="margin-top: 20px; font-weight: bold;">
-            رقم التواصل: 568230165
+        
+        <div style="text-align: center; margin-bottom: 40px; border-bottom: 2px solid #f0f2f5; padding-bottom: 30px;">
+            <span class="servic-icon"><img src="Enjaz-Office.png" alt="مكتب تعقيب"></span>
+            <h2 class="services-section-title">من نحن: مكتب تعقيب تصاريح</h2>
+            <p style="font-size: 1.1rem; color: #555; max-width: 750px; margin: 0 auto;">
+                مكتب تعقيب تصاريح هو شريكك الموثوق بالمملكة العربية السعودية، حيث نلتزم بتبسيط وإنجاز كافة معاملاتك الشخصية والحكومية. ندرك تماما التعقيدات والوقت الذي قد تستغرقه الإجراءات الرسمية، لذلك نقدم لك دعما احترافيا وشاملا. هدفنا هو ضمان إنجاز مهامك بكفاءة عالية وأعلى معايير الجودة، مما يوفر عليك الوقت والجهد الثمين.</p>
+<ul class="wp-block-list">
+<li>تصاريح الزواج: مساعدة شاملة في استخراج تصاريح الزواج، من إعداد الوثائق حتى متابعة الإجراءات لضمان سلاستها.</li>
+<li>معاملات التجنيس: دعم كامل في معاملات التجنيس، يشمل تجهيز الأوراق وتقديمها ومتابعة الملف بدقة لتحقيق أفضل النتائج.</li>
+<li>استخراج التأشيرات: دعم شامل للحصول على مختلف أنواع التأشيرات (سياحة، دراسة، عمل، علاج)، من تجهيز المتطلبات وحتى صدور التأشيرة.</li>
+</ul>
+            </p>
+            
+            <div class="contact-container" style="margin-top: 20px;">
+                <a href="https://wa.me/966568230165" class="btn whatsapp" target="_blank">واتساب</a>
+                <a href="tel:+966568230165" class="btn call">أتصل الآن</a>
+            </div>
         </div>
-    </div>
+<section class="services-section-title" id="services">
+        <h2 class="services-section-title">خدماتنا المتميزة</h2>
+        <p class="services-sectio-title">نقدم لكم العديد من الخدمات والاستشارات القانونية التي تساعدك في إتمام معاملتك في السعودية بكل سهولة في تخليص معاملات التجنيس وتصاريح الزواج في مكه راسلنا الان للحصول على استشارة</p>
 
-</div>
-<h2 class="services-section-title">عن مكتب تعقيب  </h2>
-<div class="services-container" id="abute">
-    <div class="service-item">
-    <span class="service-icon"><img src="Enjaz-Office.png" alt="مكتب تعقيب"></span>
-
-
-    <p> نحن مكتب موثق وقانوني نعمل في مجال التعقيب نقدم لكم استشارات واتمام معاملات التجنيس بمكة على يد نخبة من افضل المحامين والمختصين</p>
-    <p>هل تبحث عن مكتب تعقيب موثوق؟ نحن هنا لنقدم لك الحل الأمثل. بصفتنا مكتب تصاريح زواج معتمد، نتميز بالسرعة والدقة في إنجاز كافة معاملاتك، من طلب معقب تصريح زواج محترف يتابع معاملتك في الإمارة وأبشر، وصولاً إلى إنهاء  القانونية بكل خصوصية. نحن نختصر عليك الوقت ونضمن لك المسار الصحيح للمعاملة، فخبرتنا تمتد لسنوات في تقديم خدمات التعقيب في الرياض، مكة، وجدة
-نحن مكتب تعقيب تصاريح للخدمات الحكومية نوفر لك كل خدمات التعقيب التي تحتاج اليها في مكان واحد...
-</p>
-   
-</div>
-    <h2 class="services-section-title">خدمات مكتب التعقيب المتميزة</h2>
-
-    <p class="services-sectio-title ">
-    نقدم لكم العديد من الخدمات والاستشارات القانونية التي تساعدك في إتمام معاملتك في السعودية بكل سهولة في تخليص معاملات التجنيس وتصاريح الزواج في مكه راسلنا الان للحصول على استشارة
-
-    
-</p>
-   <div class="services-container" id="services">
-    <div class="service-item">
-    <span class="service-icon"><img src="oo.png" alt="تصريح زواج"></span>
-
-    <div class="service-title">معاملات تصاريح زواج</div>
-    <p>هل تبحث معاملات تصاريح الزواج في مكة نحن في مكتب تعقيب المعاملات تصاريح الزواج نعمل على اتمام معاملات تصاريح الزواج من الخارج او الداخل الزواج من اجنبي او اجنبية ونساعدك في تجنب الاخطاء وتجهيز ملف التقديم بطريقة صحيحة .
+        <div class="services-container">
+            <div class="service-item" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 15px; padding: 20px; border: 1px solid #eee;">
+                <span class="service-icon"><img src="oo.png" alt="تصريح زواج"></span>
+                <div class="service-title">معاملات تصاريح الزواج :</div>
+                <p>هل تبحث معاملات تصاريح الزواج في مكة نحن في مكتب تعقيب المعاملات تصاريح الزواج نعمل على اتمام معاملات تصاريح الزواج من الخارج او الداخل الزواج من اجنبي او اجنبية ونساعدك في تجنب الاخطاء وتجهيز ملف التقديم بطريقة صحيحة .
 </p>
     <div class="service-title"> دليل قانوني شامل استخراج تصريح زواج سعودي من أجنبية 2026:</div>
           <p>هل تبحث عن الطريقة الصحيحة والمضمونة لاستخراج <strong>تصريح زواج سعودي من أجنبية</strong> في عام 2026؟ مع التحول الرقمي الكامل في إجراءات وزارة الداخلية، أصبح الالتزام بالأنظمة هو المفتاح الأساسي لقبول طلبك.</p>
-</div>
-</div>
 
-<div class="service-item">
-    <span class="service-icon"><img src="ss.png" alt="تصريح زواج"></span>
-    
-    <div class="service-title">معاملات الحصول على جنسية</div>
-    <p>نحن في مكتب تعقيب الخدمات التجنيس نقدم لكم تمام كل معاملات التجنيس في السعودية من تجنيس المواليد وتجنيس اصحاب المهن النادرة والمواهب ومعاملات تجنيس زوجة مواطن سعودي او تجنس زوج مواطنة سعودية وتجنيس اصحاب القائل وكل ما يخص خدمات معاملات التجنيس نساعد في اتمام العمل وتجهيز الاوراق والمستندات المطلوبة وتقديم الطلب بالنيابة عنك ومتابعة المعاملة حتى اصدار الجنسية من وزارة الخارجية</p>
-  
-</div>
+            </div>
 
-<div class="service-item">
-    <span class="service-icon"><img src="4.png" alt="تصريح زواج"></span>
-    
-    <div class="service-title">استشارة قانونية</div>
-    <p>نقدم لكم العديد من الاستشارات القانونية التي تخص القانون السعودي بالمجان في قضايا الزواج ومعاملات التجنيس وتجهيز مستندات استخراج التصاريح او التقديم على الجنسية السعودية وفق الوائح وانضمة القانون المعمول بها في السعودية.</p>
-  
-</div>
+            <div class="service-item" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 15px; padding: 20px; border: 1px solid #eee;">
+                <span class="service-icon"><img src="ss.png" alt="معاملات تجنيس"></span>
+                <div class="service-title">معاملات الحصول على جنسية :</div>
+                <p>نحن في مكتب تعقيب الخدمات التجنيس نقدم لكم تمام كل معاملات التجنيس في السعودية من تجنيس المواليد وتجنيس اصحاب المهن النادرة والمواهب ومعاملات تجنيس زوجة مواطن سعودي او تجنس زوج مواطنة سعودية وتجنيس اصحاب القائل وكل ما يخص خدمات معاملات التجنيس نساعد في اتمام العمل وتجهيز الاوراق والمستندات المطلوبة وتقديم الطلب بالنيابة عنك ومتابعة المعاملة حتى اصدار الجنسية من وزارة الخارجية</p>
+            </div>
 
-
-<div class="service-item">
-    <span class="service-icon"><img src="mm.png" alt="تصريح زواج"></span>
-    
-    <div class="service-title">تصحيح الأوضاع</div>
-    <p>نقدم حلولاً قانونية متكاملة لتوثيق الزواج وتصحيح الأوضاع لمن تزوجوا بدون تصريح رسمي سابقاً.</p>
+            <div class="service-item" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 15px; padding: 20px; border: 1px solid #eee;">
+                <span class="service-icon"><img src="mm.png" alt="تصحيح أوضاع"></span>
+                <div class="service-title">تصحيح الأوضاع :</div>
+                <p>نقدم حلولاً قانونية متكاملة لتوثيق الزواج وتصحيح الأوضاع لمن تزوجوا بدون تصريح رسمي سابقاً.</p>
     <div class="service-title">تجنيس المواليد في السعودية</div>
     <p>وفق المادة الثامنة من نظام الجنسية، ونقوم بإنهاء إجراءات إضافة المواليد واستخراج شهادات الميلاد الرسمية.</p>
     <div class="service-title">خدمات التجنيس وتصحيح الأوضاع القانونية</div>
     <p>نحن نوفر عليك عناء المراجعات الحكومية المتعددة من خلال تقديم خدمات تعقيب متخصصة تضمن سلامة ملفك القانوني.</p>
-</div>
+
+            </div>
+
+            <div class="service-item" style="box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 15px; padding: 20px; border: 1px solid #eee;">
+                <span class="service-icon"><img src="4.png" alt="استشارات قانونية"></span>
+                <div class="service-title">استشارة قانونية :</div>
+                <p>نقدم لكم العديد من الاستشارات القانونية التي تخص القانون السعودي بالمجان في قضايا الزواج ومعاملات التجنيس وتجهيز مستندات استخراج التصاريح او التقديم على الجنسية السعودية وفق الوائح وانضمة القانون المعمول بها في السعودية.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<section class="stats-container">
-        <div class="stat-item">
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-card">
             <i class="fas fa-users"></i>
-            
             <h3 class="counter" data-target="15000">0</h3>
             <p>زائر للموقع</p>
         </div>
-        <div class="stat-item">
-            <i class="fas fa-smile"></i>
+
+        <div class="stat-card">
+            <i class="fas fa-check-circle"></i>
             <h3 class="counter" data-target="2400">0</h3>
-            <p>عميل سعيد</p>
+            <p>عميل تم خدمته</p>
         </div>
-        <div class="stat-item">
-            <i class="fas fa-gavel"></i>
+
+        <div class="stat-card">
+            <i class="fas fa-user-tie"></i>
             <h3 class="counter" data-target="15">0</h3>
             <p>خبير متخصص</p>
         </div>
-    </section>
 
-    
-
-
-
-<h2 class="services-section-title">المدونه</h2>
-  <p class="services-sectio-title ">
-    في هذه المدونة الصديقة لكم نعرض لكم منشورات متنوعة وتوعوية عن معاملات التجنيس وتصاريح الزواج والمتطلبات كل معاملة
-</p>
-
-<div class="services-container" id="services">
-    <div class="service-item">
-    
-   
-    <span class="service-icon"><img src="3.png" alt="تصريح زواج"></span>
-    <a>معاملات تصاريح الزواج</a>
-   <h1>
-    <a href="خطوات-استخراج-تصريح-زواج.html" style="text-decoration: none; color: inherit;">
-        هل تفكر في الزواج من أجنبية؟ دليلك الكامل لخطوات استخراج تصريح زواج
-    </a>
-</h1>
-
-  <span class="posted-on">
-						<time class="entry-date published updated" datetime="2026-03-16T18:57:49+03:00" itemprop="dateModified">مارس 26, 2026</time>					</span>
-
-    
-          <p>زواج المواطن السعودي من أجنبية لم يعد مجرد حلم أو أمنية بعيدة المنال، بل هو خيار متاح للكثيرين، شريطة الالتزام بالأنظمة والتعليمات التي وضعتها وزارة الداخلية لتنظيم هذه العملية. ربما تسمع الكثير من الأقاويل حول صعوبة الإجراءات أو طول فترة الانتظار، لكن الحقيقة أن الأمر أصبح أكثر سهولة ووضوحاً مما تتخيل، خاصة مع توفر الخدمات..</p>
-</div>
-</div>
-
-<div class="services-container" id="services">
-    <div class="service-item">
-    
-   
-    <span class="service-icon"><img src="3.png" alt="تصريح زواج"></span>
-    <a>معاملات تجنيس</a>
-    <h1>
-    <a href="استعلام-عن-معاملة-تجنيس-في-السعوديه.html" style="text-decoration: none; color: inherit;">
-        استعلام عن معاملة تجنيس في السعودية  2026 : دليل شامل للمتابعة الالكترونية والطرق الرسمية
-    </a>
-</h1>
-
-  <span class="posted-on">
-						<time class="entry-date published updated" datetime="2026-03-16T18:57:49+03:00" itemprop="dateModified">مارس 26, 2026</time>					</span>
-
-    
-          <p>هل سبق لك أن أنهيت معاملة حكومية في السعودية، ثم وجدت نفسك بعدها في دوامة من الأسئلة: هل تمت الموافقة على طلبي؟، أين وصلت معاملتي الآن؟، كم تبقى من الوقت؟. هذه الأسئلة تكون أكثر إلحاحاً وأعمق أثراً عندما تتعامل مع ملف حساس ومصيري مثل ملف التجنيس في السعودية. في هذا المقال، سنضعك على الطريق الصحيح…</p>
-</div>
-
-
-</div>
-</div>
-
-    
-<h2 class="services-section-title">قالوا عن مكتبنا</h2>
-<div class="testimonials-container">
-    <div class="testimonial-card">
-        <img src="2.png" alt="عميل" class="client-img">
-        <p>"أفضل معقب في الرياض، تم استخراج تصريح زواجي في وقت قياسي جداً. شكراً لكم."</p>
-        <strong>- خالد العتيبي</strong>
+        <div class="stat-card">
+            <i class="fas fa-award"></i>
+            <h3 class="counter" data-target="12">0</h3>
+            <p>سنوات خبرة</p>
+        </div>
     </div>
-    <div class="testimonial-card">
-        <img src="1.png" alt="عميل" class="client-img">
-        <p>"احترافية عالية في التعامل وسرعة في إنجاز معاملة تجنيس المواليد."</p>
-        <strong>- أمل الشهري</strong>
-    </div>
-</div>
+</section>
 
-<div class="container">
-    <p style="text-align: center; margin-bottom: 30px;">املأ البيانات أدناه، وسننتقل بك مباشرة إلى واتساب لإرسال استفسارك:</p>
     
+
+
+
+<section class="blog-section" id="blog">
+    <div class="container">
+        <h2 class="services-section-title">المدونة المعرفية</h2>
+        <p class="services-sectio-title">دليلك القانوني الشامل حول معاملات التجنيس وتصاريح الزواج في المملكة في هذه المدونة الصديقة لكم نعرض لكم منشورات متنوعة وتوعوية عن معاملات التجنيس وتصاريح الزواج والمتطلبات كل معاملة</p>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="3.png" alt="تصريح زواج" class="blog-thumb">
+                <div class="blog-content">
+                    <span class="blog-category"><i class="fas fa-heart"></i> معاملات تصاريح الزواج</span>
+                    <a href="خطوات-استخراج-تصريح-زواج.html" class="blog-title">
+                        هل تفكر في الزواج من أجنبية؟ دليلك الكامل لخطوات استخراج تصريح زواج 2026
+                    </a>
+                    <p class="blog-excerpt">
+                        زواج المواطن السعودي من أجنبية لم يعد مجرد حلم أو أمنية بعيدة المنال، بل هو خيار متاح للكثيرين، شريطة الالتزام بالأنظمة والتعليمات التي وضعتها وزارة الداخلية لتنظيم هذه العملية. ربما تسمع الكثير من الأقاويل حول صعوبة الإجراءات أو طول فترة الانتظار، لكن الحقيقة أن الأمر أصبح أكثر سهولة ووضوحاً مما تتخيل، خاصة مع توفر الخدمات..</p>
+                    
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> مارس 26, 2026</span>
+                        <a href="خطوات-استخراج-تصريح-زواج.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="ss.png" alt="معاملة تجنيس" class="blog-thumb">
+                <div class="blog-content">
+                    <span class="blog-category"><i class="fas fa-id-card"></i> معاملات التجنيس</span>
+                    <a href="استعلام-عن-معاملة-تجنيس-في-السعوديه.html" class="blog-title">
+                        دليل الاستعلام عن معاملة تجنيس 2026: طرق المتابعة الإلكترونية والرسمية
+                    </a>
+                    <p class="blog-excerpt">
+                        أين وصلت معاملتي؟ متى أحصل على الموافقة؟ نضع بين يديك الدليل الشامل لمتابعة ملف التجنيس لدى وزارة الداخلية والخارجية بكل سهولة...
+                    </p>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> مارس 26, 2026</span>
+                        <a href="استعلام-عن-معاملة-تجنيس-في-السعوديه.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+   <section class="keywords-section">
+    <h3 style="color: var(--primary-color); margin-bottom: 10px;">الخدمات الأكثر بحثاً</h3>
+    <div class="keywords-container">
+        <a href="contact.html" class="keyword-tag">تصريح زواج</a>
+        <a href="contact.html" class="keyword-tag">معاملات التجنيس</a>
+        <a href="contact.html" class="keyword-tag">زواج سعودي من أجنبية</a>
+        <a href="contact.html" class="keyword-tag">توثيق زواج</a>
+        <a href="contact.html" class="keyword-tag">معقب تصاريح الرياض</a>
+        <a href="contact.html" class="keyword-tag">تجنيس المواليد</a>
+        <a href="contact.html" class="keyword-tag">تصحيح أوضاع</a>
+        <a href="contact.html" class="keyword-tag">معقب جده</a>
+        <a href="contact.html" class="keyword-tag">موافقة زواج</a>
+        <a href="contact.html" class="keyword-tag">جنسية زوجة مواطن</a>
+        <a href="contact.html" class="keyword-tag">استخراج تصريح زواج</a>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="services-section-title">ثقة عملائنا هي فخرنا</h2>
+        <p class="services-sectio-title">آراء بعض من تشرفنا بخدمتهم في إنجاز معاملاتهم</p>
+        
+        <div class="testimonials-grid" style="margin-top: 100px;"> <div class="testimonial-card-v2">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <img src="2.png" alt="العميل خالد" class="client-avatar">
+                <p class="testimonial-text">"أفضل مكتب تعقيب تعاملت معه في الرياض. سرعة في الرد واحترافية عالية جداً في استخراج تصريح الزواج في وقت قياسي."</p>
+                <span class="client-name">الأستاذ خالد العتيبي</span>
+                <div class="client-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card-v2">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <img src="1.png" alt="العميلة أمل" class="client-avatar">
+                <p class="testimonial-text">"شكراً جزيلاً لكم على مجهودكم في معاملة تجنيس المواليد. وفرتم عليّ الكثير من التعب والمراجعات الحكومية."</p>
+                <span class="client-name">الأستاذة أمل الشهري</span>
+                <div class="client-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="contact-section-bg">
+    <div class="form-header">
+        <h3>أرسل استفسارك الآن</h3>
+        <p>نحن هنا لمساعدتك، املأ البيانات وسنتواصل معك فوراً</p>
+    </div>
+
     <form id="whatsappForm">
-        <div class="form-group">
-            <label>الاسم الكريم</label>
-            <input type="text" id="name" placeholder="اكتب اسمك هنا" required>
+        <div class="form-grid">
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> الاسم الكريم</label>
+                <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
+            </div>
+            
+            <div class="input-group">
+                <label><i class="fas fa-phone"></i> رقم الجوال</label>
+                <input type="tel" id="phone" placeholder="9665xxxxxxxx" required>
+            </div>
         </div>
-        <div class="form-group">
-            <label>رقم الجوال</label>
-            <input type="tel" id="phone" placeholder="9665xxxxxxxx" required>
-        </div>
-        <div class="form-group">
-            <label>نوع الخدمة المطلوبة</label>
-            <select id="service" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px;">
-                <option value="تصريح زواج">تصريح زواج</option>
-                <option value="تخليص معاملات">تخليص معاملات</option>
-                <option value="تجنيس">تجنيس</option>
-                <option value="تعميد خدمات">تعميد خدمات</option>
-                <option value="أخرى">أخرى</option>
+
+        <div class="input-group">
+            <label><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة</label>
+            <select id="service">
+                <option value="تصريح زواج من أجنبية">تصريح زواج من أجنبية</option>
+                <option value="معاملة تجنيس">معاملة تجنيس</option>
+                <option value="تصحيح أوضاع قانونية">تصحيح أوضاع قانونية</option>
+                <option value="استشارة قانونية">استشارة قانونية مجانية</option>
+                <option value="أخرى">خدمة أخرى</option>
             </select>
         </div>
-        <div class="form-group">
-            <label>نص الاستفسار</label>
-            <textarea id="message" rows="4" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+
+        <div class="input-group">
+            <label><i class="fas fa-envelope-open-text"></i> تفاصيل استفسارك</label>
+            <textarea id="message" rows="4" placeholder="اكتب استفسارك هنا بكل وضوح لنسهل عليك الإجراءات..."></textarea>
         </div>
-        <button type="button" class="submit-btn" onclick="sendToWhatsApp()">إرسال الاستفسار عبر واتساب 📱</button>
+
+        <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
+            <i class="fab fa-whatsapp"></i> إرسال عبر واتساب 
+        </button>
     </form>
-</div>
+</section>
 
 <script>
     function sendToWhatsApp() {
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        // رقم الواتساب الخاص بك
-        const ownerNumber = "966568230165";
-        
-        // صياغة الرسالة
-        const whatsappMessage = `*رسالة جديدة من موقع مكتب تعقيب تصاريح*%0A%0A` +
-                                `*الاسم:* ${name}%0A` +
-                                `*رقم الجوال:* ${phone}%0A` +
-                                `*الخدمة المطلوبة:* ${service}%0A` +
-                                `*الاستفسار:* ${message}`;
-        
-        // رابط الواتساب
-        const url = `https://wa.me/${ownerNumber}?text=${whatsappMessage}`;
-        
-        // فتح الرابط
-        window.open(url, '_blank');
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    if(!name || !phone) {
+        alert("يرجى ملء الاسم ورقم الجوال أولاً");
+        return;
     }
+
+    const ownerNumber = "966568230165";
     
+    // استخدام رموز الإيموجي مباشرة مع التأكد من ترميز النص كاملاً
+    const textPart = 
+        `*طلب جديد من الموقع 📥* \n` +
+        `-------------------------- \n` +
+        `*👤 الاسم:* ${name} \n` +
+        `*📱 الجوال:* ${phone} \n` +
+        `*🛠 الخدمة:* ${service} \n` +
+        `*📝 الاستفسار:* ${message} \n` +
+        `-------------------------- \n` +
+        `*المصدر:* موقع مكتب التعقيب الرسمي`;
+
+    // تحويل النص بالكامل إلى صيغة تفهمها الروابط (encodeURIComponent)
+    const encodedMessage = encodeURIComponent(textPart);
+
+    const url = `https://wa.me/${ownerNumber}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+}
+
     
     
     const counters = document.querySelectorAll('.counter');
@@ -665,8 +1223,8 @@ footer a:hover {
             }
         }, { threshold: 0.5 });
 
-        if (document.querySelector('.stats-container')) {
-            observer.observe(document.querySelector('.stats-container'));
+        if (document.querySelector('.stats-section')) {
+            observer.observe(document.querySelector('.stats-section'));
         }
 </script>
 
@@ -677,19 +1235,46 @@ footer a:hover {
 
 
 <footer>
-    <div style="margin-bottom: 20px;">
-        <h4 style="color: #ffd700; margin-bottom: 15px;">روابط سريعة</h4>
-        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="index.html#services">خدماتنا</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
-            <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
-            <li><a href="contact.html">تواصل معنا</a></li>
-        </ul>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>مكتب تعقيب خبير</h4>
+            <p>نحن شريكك الموثوق في المملكة العربية السعودية لإنجاز كافة المعاملات الحكومية وتصاريح الزواج والتجنيس بأعلى معايير السرعة والسرية التامة.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/966568230165" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+966568230165" class="social-icon"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+                <li><a href="#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
+                <li><a href="privacy-policy.html"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a></li>
+                <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>بيانات التواصل</h4>
+            <ul class="footer-links">
+                <li><a href="tel:+966568230165"><i class="fas fa-phone-alt"></i> 966568230165+</a></li>
+                <li><a href="https://wa.me/966568230165"><i class="fab fa-whatsapp"></i> خدمة العملاء (واتساب)</a></li>
+                <li><p style="margin:0;"><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية - الرياض - جدة - مكة</p></li>
+                <li><p style="margin:0;"><i class="fas fa-clock"></i> متاحون لخدمتكم على مدار 24 ساعة</p></li>
+            </ul>
+        </div>
     </div>
-    <p>نخدمكم في كافة أنحاء المملكة العربية السعودية 🇸🇦</p>
-    <p>جميع الحقوق محفوظة &copy; 2026 | مكتب تعقيب</p>
+
+    <div class="footer-bottom">
+    
+        <p>جميع الحقوق محفوظة &copy; 2026 | تصميم وتطوير مكتب تعقيب</p>
+    </div>
 </footer>
+
 
 
 <script>
