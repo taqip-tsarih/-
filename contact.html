@@ -1,383 +1,871 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        تواصل معنا | مكتب تعقيب تصاريح زواج سعودي خبير في كافة مناطق المملكه
-</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>منصة تعميد خدمات انجاز معاملات</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "ما هي خطوات طلب التعميد عبر منصة تعميد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تبدأ الخطوات بتعبئة نموذج طلب التعميد، تحديد بيانات صاحب الطلب ومقدم الخدمة، دفع المبلغ المطلوب، ثم نقوم بإنشاء مجموعة واتساب لضمان حقوق الطرفين."
+        }
+      }, {
+        "@type": "Question",
+        "name": "كيف تضمن منصة تعميد حقوق الطرفين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تقوم المنصة بحجز مبلغ الاتفاق في محفظة آمنة ولا يتم تحويله لمقدم الخدمة إلا بعد تأكيد الإنجاز، وفي حال عدم التنفيذ يسترجع صاحب الطلب مبلغه تلقائياً."
+        }
+      }, {
+        "@type": "Question",
+        "name": "ما هي رسوم خدمة التعميد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الرسوم هي 50 ريال للمبالغ أقل من 500 ريال، و100 ريال للمبالغ حتى 3000 ريال، و3% من قيمة التعميد للمبالغ التي تزيد عن ذلك."
+        }
+      }]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "منصة تعميد - إنجاز معاملات",
+      "url": "https://mnstwsattlltmyd.com",
+      "logo": "https://mnstwsattlltmyd.com/logo.jpeg",
+      "image": "https://mnstwsattlltmyd.com/waseet.png",
+      "description": "منصة متخصصة في حجز المبالغ وضمان المعاملات بين صاحب الطلب ومقدم الخدمة، لتوفير بيئة آمنة تضمن حقوق الطرفين.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+0568230165",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    <meta property="og:type" content="website">
+<meta property="og:url" content="https://mnstwsattlltmyd.com">
+<meta property="og:title" content="منصة تعميد - لخدمات المعاملات والحلول الذكية">
+<meta property="og:description" content="منصة متخصصة في حجز المبالغ وضمان المعاملات بين صاحب الطلب ومقدم الخدمة، لتوفير بيئة آمنة تضمن حقوق الطرفين.">
+<meta property="og:image" content="https://mnstwsattlltmyd.com/waseet.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="منصة تعميد - لخدمات المعاملات">
+<meta name="twitter:description" content="منصة متخصصة في حجز المبالغ وضمان المعاملات بين صاحب الطلب ومقدم الخدمة.">
+<meta name="twitter:image" content="https://mnstwsattlltmyd.com/waseet.png">
+    
+    <link rel="icon" type="image/png" href="waseet.png"> 
+    <meta name="description" content="منصة تعميد لخدمات التعميد المالي لضمان حقوقك في المعاملات. تعميد خدمات إلكترونية ومشاريع وأي اتفاقات مالية بأمان وشفافية."/>
+    <meta name="keywords" content="تعميد انجاز معاملات لخدمات التعميد, خدمات التعميد منصة تعميد, تعميد خدمات, منصة تعميد إنجاز معاملات, تعميد مالي, ضمان الحقوق"/>        
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-        :root { --primary-color: #1a5d1a; --accent-gold: #d4af37; --bg-light: #f0f2f5; --text-main: #2c3e50; }
-        body { font-family: 'Tajawal', sans-serif; background-color: var(--bg-light); color: var(--text-main); margin: 0; line-height: 1.7; }
-
-        /* الهيدر */
-        header { background-image: url('samo.png'); background-size: cover; background-position: center; color: white; text-align: center; padding: 60px 20px; position: relative; clip-path: ellipse(120% 100% at 50% 0%); }
-        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1; }
-        header h1 { position: relative; z-index: 2; font-weight: 800; margin: 0; }
-
-        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-
-        /* النموذج */
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--primary-color); }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box; font-family: inherit; }
-        .submit-btn { width: 100%; padding: 15px; background: var(--primary-color); color: white; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; transition: 0.3s; font-size: 1.1rem; }
-        .submit-btn:hover { background: #134613; transform: translateY(-2px); }
-
-        /* معلومات التواصل */
-        .contact-info { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
-        .contact-info a { color: var(--primary-color); font-weight: 700; text-decoration: none; font-size: 1.2rem; display: block; margin: 10px 0; }
-
-        /* تنسيق الفوتر المطور */
-footer {
-    background: linear-gradient(145deg, #0a251a 0%, #004d00 100%);
-    color: white;
-    padding: 60px 20px 30px;
-    margin-top: 50px;
-    border-top: 4px solid #ffd700; /* خط ذهبي رفيع في الأعلى */
-    position: relative;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    text-align: right;
-}
-
-.footer-column h4 {
-    color: #ffd700;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-column h4::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50px;
-    height: 2px;
-    background: #ffd700;
-}
-
-.footer-column p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-links a:hover {
-    color: #ffd700;
-    padding-right: 10px;
-}
-
-/* أزرار التواصل الاجتماعي */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.social-icon:hover {
-    background: #ffd700;
-    color: #004d00;
-    transform: translateY(-5px);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: #bbb;
-}
-
-/* تنسيق خاص للجوال */
-@media (max-width: 600px) {
-    .footer-container { text-align: center; }
-    .footer-column h4::after { right: 50%; transform: translateX(50%); }
-    .footer-links a { justify-content: center; }
-    .social-icons { justify-content: center; }
-}
-
+        /* =======================================
+           التنسيقات المخصصة (CSS)
+           ======================================= */
         
-        /* تنسيق نموذج التواصل المطور */
-.contact-section-bg {
-    background: #ffffff;
-    padding: 60px 20px;
-    border-radius: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    max-width: 800px;
-    margin: 40px auto;
-    border-top: 6px solid var(--primary-color);
-}
+        /* تنسيق SweetAlert2 المدمج والموحد */
+        .swal2-arabic-rtl {
+            direction: rtl;
+            text-align: right;
+        }
 
-.form-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+        .swal2-custom-success-modal {
+            border-radius: 20px !important;
+            background-color: white !important;
+            padding: 30px !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+            font-family: 'Arial', sans-serif; 
+        }
 
-.form-header h3 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
+        .swal2-custom-success-modal .swal2-title {
+            color: #007000 !important;
+            font-size: 1.8rem !important;
+            font-weight: bold !important;
+            padding-top: 15px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 0.5rem;
+        }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
+        .swal2-custom-success-modal .swal2-html-container {
+            color: #4a4a4a !important;
+            font-size: 1.1rem !important;
+            font-weight: normal !important;
+            margin-top: 0 !important;
+        }
 
-/* تنسيق الحقول */
-.input-group {
-    margin-bottom: 20px;
-    text-align: right;
-}
+      /* تنسيقات عامة */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
 
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: #444;
-    font-size: 0.95rem;
-}
+        .header {
+            background-color: #0d6efd;
+            border-bottom: 1px solid #eee;
+            padding: 2px 0;
+        }
 
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-    width: 100%;
-    padding: 14px;
-    border: 2px solid #f0f0f0;
-    border-radius: 12px;
-    background: #fdfdfd;
-    font-family: 'Tajawal', sans-serif;
-    font-size: 1rem;
-    transition: 0.3s;
-    box-sizing: border-box;
-}
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-inline-end: 10px;
+        }
 
-.input-group input:focus, 
-.input-group select:focus, 
-.input-group textarea:focus {
-    border-color: var(--primary-color);
-    background: #fff;
-    outline: none;
-    box-shadow: 0 0 10px rgba(26, 93, 26, 0.1);
-}
+        .titles .ministry {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0d6efd;
+            margin: 0;
+            line-height: 1.2;
+        }
 
-/* الزر النابض */
-.whatsapp-submit-btn {
-    width: 100%;
-    padding: 18px;
-    background: #25d366;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    font-weight: 800;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: 0.3s;
-    animation: pulse-green 2s infinite;
-}
+        .titles .kingdom {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin: 0;
+            line-height: 1.2;
+        }
 
-@keyframes pulse-green {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-.whatsapp-submit-btn:hover {
-    background: #1eb954;
-    transform: translateY(-3px);
-}
-
-/* للجوال: جعل الحقول تحت بعضها */
-@media (max-width: 600px) {
-    .form-grid { grid-template-columns: 1fr; }
-}
-
- .back-home {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-decoration: none;
+        .nav-link.active {
+            color: #0d6efd !important;
             font-weight: bold;
         }
+
+        .navbar-nav .nav-link {
+            padding-inline-start: 1rem;
+            padding-inline-end: 1rem;
+        }
+
+        .auth-links a {
+            font-weight: bold;
+            color: #212529;
+            text-decoration: none;
+        }
+
+        .register-link a {
+            color: #0d6efd !important;
+        }
+
+        .dropdown-menu {
+            text-align: right;
+        }
+
+        /* تنسيقات شريط الصور الرئيسي (Slider) */
+        .slider {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* تنسيقات شريط الشعارات (Logo Slider) */
+        .logo-slider {
+            background-color: white;
+            padding: 20px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .logo-item img {
+            max-width: 100px;
+            max-height: 50px;
+            object-fit: contain;
+            margin: 0 15px;
+            display: inline-block;
+            opacity: 0.7;
+        }
+
+        /* تنسيقات المحتوى الرئيسي والنماذج */
+        .section-title {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .col-md-6.text-right, .col-md-6.px-2 {
+            text-align: right;
+        }
+
+        .about li {
+            list-style: none;
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+        }
+
+        .about li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .form-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .form-section h3 {
+            color: #0d6efd;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .service-price h5 {
+            color: #dc3545;
+        }
+        
+        .service-price p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .payment-options label {
+            margin-inline-end: 20px;
+        }
+
+        .submit-btn {
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        
+        .icon-img {
+            max-width: 80px;
+            margin-bottom: 15px;
+        }
+
+        /* تنسيقات الإحصائيات */
+        .stats-section {
+            padding: 40px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .stats-section h2 {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .stats-section p {
+            color: #6c757d;
+        }
+
+        .stat-item {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bolder;
+            color: #28a745; /* لون مميز للرقم */
+            line-height: 1;
+        }
+
+        .stat-description {
+            font-size: 1.1rem;
+            color: #343a40;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* تنسيقات التذييل (Footer) */
+        .footer {
+            background-color: #343a40; 
+            color: white;
+            padding: 40px 0 10px 0;
+            margin-top: 30px;
+        }
+
+        .footer-logo {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .parcode-image {
+            max-width: 100px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #0d6efd;
+        }
+
+        .terms {
+            align-items: center;
+        }
+        
+        .btn-whatsapp-custom {
+    background-color: #0d6efd; /* لون أزرق (Bootstrap Primary) */
+    border: none;
+    color: #ffffff; /* نص بلون أبيض ليتناسب مع الأزرق */
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-custom:hover {
+    background-color: #0b5ed7; /* درجة أزرق أغمق عند التمرير */
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+}
+        
+        /* تنسيق حقل التاريخ ليناسب الهواتف */
+input[type="date"] {
+    position: relative;
+    text-align: right;
+    direction: rtl;
+}
+
+/* تخصيص أيقونة التقويم لتظهر بشكل لائق */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* إضافة أيقونة تقويم وهمية جهة اليسار للتنبيه */
+input[type="date"]::after {
+    content: "\f133"; /* كود أيقونة التقويم من FontAwesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0d6efd;
+    pointer-events: none;
+}
+
+     
     </style>
 </head>
 <body>
+    <header class="header container">
+        <nav dir="rtl" class="navbar navbar-expand-lg navbar-light mx-auto bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="logo-titles d-flex align-items-center justify-content-center">
+                    <img src="logo.jpeg" alt="Logo" class="logo">
+                    <div class="titles">
+                        <h1 class="ministry">منصة تعميد</h1>
+                        <h2 class="kingdom">انجاز خدمات المعاملات</h2>
+                    </div>
+                </div>
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div id="navbarNav" class="navbar-collapse collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">طلب تعميد</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="faqDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle" href="#">الأسئلة الشائعة</a>
+                            <ul aria-labelledby="faqDropdown" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">من نحن</a></li>
+                                <li><a class="dropdown-item" href="#">الشروط والأحكام</a></li>
+                                <li><a class="dropdown-item" href="#">عمولة المنصة</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle" href="#"> خدماتنا </a>
+                            <ul aria-labelledby="servicesDropdown" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">إلغاء تعميد</a></li>
+                                <li><a class="dropdown-item" href="#">استرجاع تعميد</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="auth-links d-flex align-items-center">
+                    <div class="login-link">
+                        <a class="nav-link" href="#">تسجيل دخول</a>
+                    </div>
+                    <div class="register-link">
+                        <a class="nav-link ms-3" href="#">إنشاء حساب</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>تواصل معنا</h1>
-</header>
-<div class="containr">
-    <a href="index.html" class="back-home"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
-<section class="contact-section-bg">
-    <div class="form-header">
-        <h3>أرسل استفسارك الآن</h3>
-        <p>نحن هنا لمساعدتك، املأ البيانات وسنتواصل معك فوراً</p>
+    <div class="container">
+        <div class="slider mt-3">
+            <div class="slide active">
+                <img alt="Banner Image" src="samo.png">
+            </div>
+        </div>
     </div>
 
-    <form id="whatsappForm">
-        <div class="form-grid">
-            <div class="input-group">
-                <label><i class="fas fa-user"></i> الاسم الكريم</label>
-                <input type="text" id="name" placeholder="مثال: محمد أحمد" required>
+    <div class="container mt-4">
+        <div class="logo-slider shadow-sm">
+            <div class="logo-slides">
+                <div class="logo-slide d-flex justify-content-around align-items-center">
+                    <div class="logo-item"><img alt="Logo 1 - وزارة الخارجية" class="logo" src="images (2).png"></div>
+                    <div class="logo-item"><img alt="Logo 2 - وزارة العدل" class="logo" src="Adl.png"></div>
+                    <div class="logo-item"><img alt="Logo 3 - الجوازات" class="logo" src="gaw.png"></div>
+                    <div class="logo-item"><img alt="Logo 4 - الشعار الرئيسي" class="logo" src="logo.jpeg"></div>
+                    <div class="logo-item"><img alt="Logo 5 - الشعار الرئيسي" class="logo" src="logo.jpeg"></div> 
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 px-2">
+                <h2 class="section-title text-center">ماذا يعني الاعتماد؟</h2>
+                <p class="text-center"> هو يشير إلى الوساطة المالية في المعاملات نقوم بها إلكترونيا عبر تطبيق الواتساب لضمان الحقوق للطرفين فهي خدمة حجز مبلغ الاتفاق في محفظة التعميد تحت اشرافنا والذي يقوم بدفعه صاحب الطلب إلى منصة اعتماد لفترة التعميد وتحت تنفيذ الشروط المتفق عليها بين الاطراف وهذا لضمان تقديم الخدمة أو المنتج لصاحب الطلب ، فنضمن لصاحب الطلب عدم تحويله مبلغ المعاملة قبل الانجاز لضمان حقه بالتنفيذ وعدم الاحتيال من قبل بعض مقدمي الخدمة ولضمان حق مقدم الخدمة بجدية العملاء وعدم حدوث نزاعات على التحصيل بعد الانجاز اذا قام مقدم الخدم بتنفيذ طلبك طبقاً للاتفاق وفي خلال المدة المتفق عليها يستلم المبلغ في حالة عدم غير ذلك او عدم انجز المعاملة يلغى التعميد تلقاىياً ويسترجع لصاحب الطلب <br><br> وهذا حسب الإتفاق الموضح من قبل صاحب الطلب بنموذج فتح التعميد </p><br>
+                <h5 class="text-right">حيث يجب التأكد من دقة وصحة كافة البيانات الأتية :- </h5>
+                <ul class="about">
+                    <li>تقييم العمليات والإجراءات.</li>
+                    <li>التحقق من توافق المؤسسة مع المعايير.</li>
+                    <li>تحديد الفجوات وتحسين الأداء.</li>
+                    <li>تقديم الخدمات بجودة عالية.</li>
+                    <li>تعزيز ثقة الجمهور.</li>
+                </ul><br><br>
+                <div>
+                    <h5 class="text-center"> بعد تعبئة الطلب وسداد المبلغ يتم إصدار محفظة التعميد وإنشاء قروب التعميد </h5><br>
+                    <p class="text-right">وبعد إرسال البيانات من صاحب الطلب نقوم بفتح التعميد لك في قروب على الواتساب ويقوم بإضافتك وإضافة الطرف الأخر المتفق معه ويتم نشر تفاصيل الإتفاق كاملةً بالقروب ونضمن لك تنفيذ الإتفاق في مقابل نسبة من مبلغ الاتفاق .</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-right">
+                <h2 class="section-title text-right">طلب إعتماد خدمة</h2>
+             <form id="baptismForm" novalidate action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="c4a88d20-5588-4b2d-b6b5-80f5897683b5">
+    <input type="hidden" name="subject" value="طلب تعميد جديد - منصة تعميد">
+    <input type="hidden" name="from_name" value="منصة تعميد">
+    
+    <input type="hidden" name="Full_Report" id="formattedMessage">
+    
+    <input type="checkbox" name="botcheck" style="display: none;">
+
+    <div class="form-section">
+        <h3>1- بيانات صاحب الطلب</h3>
+        <div class="form-group">
+            <label for="requester-name">اسم صاحب الطلب *</label>
+            <input type="text" id="requester-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="requester-id">رقم صاحب الطلب (واتساب) *</label>
+            <input type="tel" id="requester-id" placeholder="966500000000" class="form-control" required pattern="[0-9]+">
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>2- بيانات مقدم الخدمة</h3>
+        <div class="form-group">
+            <label for="provider-name">اسم مقدم الخدمة *</label>
+            <input type="text" id="provider-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="provider-id">رقم مقدم الخدمة (واتساب) *</label>
+            <input type="tel" id="provider-id" placeholder="966500000000" class="form-control" required pattern="[0-9]+">
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>3- تفاصيل الاتفاق</h3>
+        <div class="form-group">
+            <label for="agreement-details">تفاصيل الاتفاق *</label>
+            <textarea id="agreement-details" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="theDayTheBaptismEnded">تاريخ انتهاء التعميد *</label>
+            <input type="date" id="theDayTheBaptismEnded" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="servicePrice">مبلغ التعميد (ريال) *</label>
+        <input type="number" id="servicePrice" class="form-control" required>
+        
+        <div class="mt-3 p-3 bg-light rounded border text-right">
+            <div>رسوم المنصة: <span id="platformFee">0</span> ريال</div>
+            <div class="fw-bold text-success">الإجمالي: <span id="totalAmount">0</span> ريال</div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>4- الدفع والموافقة</h3>
+        <div class="form-group">
+            <div class="payment-options">
+                <label class="me-3"><input type="radio" name="pay_method" value="تحويل بنكي" checked> تحويل بنكي</label>
+                <label class="me-3"><input type="radio" name="pay_method" value="بطاقة مدى"> مدى</label>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mt-3">
+            <input type="checkbox" id="agree-terms" class="ms-2" required>
+            <label for="agree-terms">أوافق على كافة الشروط والأحكام</label>
+        </div>
+    </div>
+
+    <button type="submit" class="submit-btn mb-3">إرسال الطلب رسمياً</button>
+</form>
+
+        <div id="contact-us" class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h2 class="section-title">للتواصل المباشر والاستفسارات</h2>
+                <p class="lead">يمكنك التواصل مباشرة مع فريق الدعم الفني أو فريق التعميد عبر الواتساب للرد الفوري على استفساراتك.</p>
+                <a href="https://wa.me/966566490889" target="_blank" class="btn btn-lg mt-3 btn-whatsapp-custom">
+                    <i class="fab fa-whatsapp me-2"></i> تواصل عبر الواتساب الآن
+                </a>
+                <p class="mt-3">للدعم الفني والاستفسارات: <a href="https://wa.me/966566490889" target="_blank" style="text-decoration: none; color: #0d6efd;">966566490889</a> 
+                <p>لمتابعة طلبات التعميد: سيتم إنشاء مجموعة خاصة بك فور إتمامك لطلب فتح التعميد.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4 text-center">
+                <img src="https://minasatwasitsuadi.com/assets/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(8).png" alt="الرؤية" class="img-fluid icon-img">
+                <h3>الرؤية</h3>
+                <p>تحقيق التميز في تقديم الخدمات الحكومية بكفاءة وشفافية.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://minasatwasitsuadi.com/assets/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(9).png" alt="الرسالة" class="img-fluid icon-img">
+                <h3>الرسالة</h3>
+                <p>ضمان تطبيق معايير الجودة وتحسين الأداء في جميع القطاعات.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://minasatwasitsuadi.com/assets/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(10).png" alt="الهدف" class="img-fluid icon-img">
+                <h3>الهدف</h3>
+                <p>تحقيق رؤية 2030 من خلال التحسين المستمر والتطوير المستدام.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="stats-section">
+            <h2 class="mb-2">أرقام نفتخر بها</h2>
+            <p>نحن نفتخر في تقييمات عملائنا</p>
             
-            <div class="input-group">
-                <label><i class="fas fa-phone"></i> رقم الجوال</label>
-                <input type="tel" id="phone" placeholder="9665xxxxxxxx" required>
+            <div class="row text-center">
+                
+                <div class="col-md-4 col-sm-12 stat-item">
+                    <p class="stat-number" id="stat1" data-target="15">0</p>
+                    <p class="stat-description">عاماً من الخبرة</p>
+                </div>
+                
+                <div class="col-md-4 col-sm-12 stat-item">
+                    <p class="stat-number" id="stat2" data-target="20">0</p>
+                    <p class="stat-description">خبير في معاملات التجنيس</p>
+                </div>
+                
+                <div class="col-md-4 col-sm-12 stat-item">
+                    <p class="stat-number" id="stat3" data-target="150">0</p>
+                    <p class="stat-description">عميل سعيد</p>
+                </div>
+                
             </div>
-        </div>
-
-        <div class="input-group">
-            <label><i class="fas fa-concierge-bell"></i> نوع الخدمة المطلوبة</label>
-            <select id="service">
-                <option value="تصريح زواج من أجنبية">تصريح زواج من أجنبية</option>
-                <option value="معاملة تجنيس">معاملة تجنيس</option>
-                <option value="تصحيح أوضاع قانونية">تصحيح أوضاع قانونية</option>
-                <option value="استشارة قانونية">استشارة قانونية مجانية</option>
-                <option value="أخرى">خدمة أخرى</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label><i class="fas fa-envelope-open-text"></i> تفاصيل استفسارك</label>
-            <textarea id="message" rows="4" placeholder="اكتب استفسارك هنا بكل وضوح لنسهل عليك الإجراءات..."></textarea>
-        </div>
-
-        <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
-            <i class="fab fa-whatsapp"></i> إرسال عبر واتساب 
-        </button>
-    </form>
-</section>
-
-
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-column">
-            <h4>مكتب تعقيب تصاريح زواج
-            خبرة وثقه </h4>
-            <p>نحن شريكك الموثوق في المملكة العربية السعودية لإنجاز كافة المعاملات الحكومية وتصاريح الزواج والتجنيس بأعلى معايير السرعة والسرية التامة.</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/966568230165" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                <a href="tel:+966568230165" class="social-icon"><i class="fas fa-phone"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-column">
-            <h4>روابط سريعة</h4>
-            <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
-                <li><a href="index.html#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
-                <li><a href="index.html#blog"><i class="fas fa-chevron-left"></i> المدونة</a></li>
-                <li><a href="privacy-policy.html"><i class="fas fa-chevron-left"></i> سياسة الخصوصية</a></li>
-                <li><a href="faq.html"><i class="fas fa-chevron-left"></i> الأسالة الشائعة </a></li>
-                <li><a href="contact.html"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h4>بيانات التواصل</h4>
-            <ul class="footer-links">
-                <li><a href="tel:+966568230165"><i class="fas fa-phone-alt"></i> 966568230165+</a></li>
-                <li><a href="https://wa.me/966568230165"><i class="fab fa-whatsapp"></i> خدمة العملاء (واتساب)</a></li>
-                <li><p style="margin:0;"><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية - الرياض - جدة - مكة</p></li>
-                <li><p style="margin:0;"><i class="fas fa-clock"></i> متاحون لخدمتكم على مدار 24 ساعة</p></li>
-            </ul>
         </div>
     </div>
 
-    <div class="footer-bottom">
-    
-        <p>جميع الحقوق محفوظة &copy; 2026 | تصميم وتطوير مكتب تعقيب</p>
-    </div>
-</footer>
-<script>
-    function sendToWhatsApp() {
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value;
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="logo.jpeg" alt="وسيط " class="footer-logo">
+                    <p>منصة رقمية معتمدة ومرخصة - المملكة العربية السعودية</p>
+                    <p>وزارة التجارة والاستثمار</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>خدماتنا</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">طلب تعميد</a></li>
+                        <li><a href="#">تسجيل دخول</a></li>
+                        <li><a href="#contact-us">اتصل بنا</a></li>
+                        <li><img src="https://minasatwasitsuadi.com/assets/parcode.jpg" alt="parcode" class="parcode-image"></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>معلومات</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">عمولة المنصة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <p>جميع الحقوق محفوظة © بوابة اعتماد الواسطة - المملكة العربية السعودية</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    if(!name || !phone) {
-        alert("يرجى ملء الاسم ورقم الجوال أولاً");
-        return;
-    }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    const ownerNumber = "966568230165";
-    
-    // استخدام رموز الإيموجي مباشرة مع التأكد من ترميز النص كاملاً
-    const textPart = 
-        `*طلب جديد من الموقع 📥* \n` +
-        `-------------------------- \n` +
-        `*👤 الاسم:* ${name} \n` +
-        `*📱 الجوال:* ${phone} \n` +
-        `*🛠 الخدمة:* ${service} \n` +
-        `*📝 الاستفسار:* ${message} \n` +
-        `-------------------------- \n` +
-        `*المصدر:* موقع مكتب التعقيب الرسمي`;
+    <script>
+       /* =======================================
+   منطق الإرسال مع تنبيه التحقق من الحقول
+   ======================================= */
 
-    // تحويل النص بالكامل إلى صيغة تفهمها الروابط (encodeURIComponent)
-    const encodedMessage = encodeURIComponent(textPart);
+// 2. منطق الإرسال المطور لـ Web3Forms
+const baptismForm = document.getElementById('baptismForm');
 
-    const url = `https://wa.me/${ownerNumber}?text=${encodedMessage}`;
-    window.open(url, '_blank');
+if (baptismForm) {
+    baptismForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (!baptismForm.checkValidity()) {
+            baptismForm.classList.add('was-validated');
+            Swal.fire({ title: 'تنبيه', text: 'يرجى إكمال جميع الحقول بدقة', icon: 'warning' });
+            return;
+        }
+
+        const btn = baptismForm.querySelector('.submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'جاري المعالجة...';
+
+        // تجميع البيانات للتقرير الرسمي
+        const data = {
+            requester: document.getElementById('requester-name').value,
+            reqPhone: document.getElementById('requester-id').value,
+            provider: document.getElementById('provider-name').value,
+            proPhone: document.getElementById('provider-id').value,
+            price: document.getElementById('servicePrice').value,
+            total: document.getElementById('totalAmount').textContent,
+            expiry: document.getElementById('theDayTheBaptismEnded').value,
+            details: document.getElementById('agreement-details').value,
+            payment: baptismForm.querySelector('input[name="pay_method"]:checked').value
+        };
+
+        // بناء نص التقرير بشكل "رسمي" يظهر بوضوح في الإيميل
+        const reportBody = `
+
+      تــقــريــر طلـب تـعمـيد من منصة تعميد     
+
+
+• اسم صـاحب الـطلب: ${data.requester}
+• جـوال صاحب الـطلب: ${data.reqPhone}
+• اسم مـقدم الـخدمة: ${data.provider}
+• جـوال مقدم الـخدمة: ${data.proPhone}
+• مـبـلـغ الـتـعـمـيـد: ${data.price} ريال
+• الإجـمـالـي بالرسوم: ${data.total} ريال
+• طـريـقـة الـدفـع: ${data.payment}
+• تـاريـخ الانـتـهـاء: ${data.expiry}
+• نـص الاتـفـاق: "${data.details}"
+
+
+تم الإرسال عبر البوابة الرسمية لمنصة تعميد
+        `;
+
+        // إرسال التقرير النهائي فقط لتجنب النصوص الملونة المزعجة
+        const finalFormData = new FormData();
+        finalFormData.append("access_key", "c4a88d20-5588-4b2d-b6b5-80f5897683b5");
+        finalFormData.append("subject", "طلب تعميد جديد: " + data.requester);
+        finalFormData.append("from_name", "منصة تعميد");
+        finalFormData.append("Report_Details", reportBody); // اسم الحقل إنجليزي لمنع التشفير
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: finalFormData
+        })
+        .then(res => {
+            if (res.ok) {
+                Swal.fire({
+                    title: 'تم الإرسال بنجاح',
+                    text: 'وصل طلبك للإدارة، وسيتم التواصل معكم عبر الواتساب.',
+                    icon: 'success'
+                });
+                baptismForm.reset();
+                document.getElementById('platformFee').textContent = '0';
+                document.getElementById('totalAmount').textContent = '0';
+            } else {
+                Swal.fire('خطأ', 'حدثت مشكلة في السيرفر، يرجى المحاولة لاحقاً', 'error');
+            }
+        })
+        .catch(() => Swal.fire('خطأ', 'تأكد من اتصال الإنترنت', 'error'))
+        .finally(() => {
+            btn.disabled = false;
+            btn.textContent = 'إرسال الطلب رسمياً';
+        });
+    });
 }
 
-</script>
+    /* =======================================
+       منطق عداد الأرقام (Stats Counter Logic)
+       ======================================= */
+    // دالة حركة العد
+    function animateCount(element, start, end, duration) {
+        let startTime = null;
 
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const percentage = Math.min(progress / duration, 1);
+            const currentValue = Math.floor(start + (end - start) * percentage);
+            
+            element.textContent = currentValue;
+
+            if (percentage < 1) {
+                window.requestAnimationFrame(step);
+            }
+        }
+        
+        window.requestAnimationFrame(step);
+    }
+
+    // دالة بدء العدادات مع حفظ حالة العميل السعيد
+    function startCounters() {
+        
+        // --- 1. التعامل مع عداد العملاء السعداء (stat3) ---
+        const clientStatElement = document.getElementById('stat3');
+        let initialTarget = parseInt(clientStatElement.getAttribute('data-target'));
+        const localStorageKey = 'happyClientsCount';
+
+        // جلب القيمة المخزنة أو استخدام القيمة الأولية
+        let currentCount = parseInt(localStorage.getItem(localStorageKey)) || initialTarget;
+
+        // زيادة العدد بمقدار 1 للعميل الجديد في هذه الجلسة
+        currentCount += 1; 
+
+        // تخزين العدد الجديد
+        localStorage.setItem(localStorageKey, currentCount);
+        
+        // تطبيق القيمة الجديدة على الـ data-target
+        clientStatElement.setAttribute('data-target', currentCount);
+        
+        // --- 2. تشغيل العدادات كلها ---
+        const statItems = document.querySelectorAll('.stat-number');
+        statItems.forEach(item => {
+            const target = parseInt(item.getAttribute('data-target'));
+            const duration = 2000; // مدة العد 2 ثانية
+            
+            if (item.id === 'stat3') {
+                 // لعداد العملاء، يبدأ من القيمة السابقة (المخزنة)
+                 animateCount(item, target - 1, target, duration);
+            } else {
+                 // للعدادات الأخرى (عام وخبير) نبدأ العد من. 0
+                 animateCount(item, 0, target, duration);
+            }
+        });
+    }
+
+    // ابدأ العد عندما تصبح الصفحة جاهزة بالكامل
+    window.addEventListener('load', startCounters);
+    
+    
+    /* =======================================
+   1. منطق الحساب التلقائي للرسوم
+   ======================================= */
+function calculateFees(amount) {
+    let fee = 0;
+    if (amount > 0 && amount <= 500) {
+        fee = 50;
+    } else if (amount > 500 && amount <= 3000) {
+        fee = 100;
+    } else if (amount > 3000) {
+        fee = amount * 0.03;
+    }
+    return fee;
+}
+
+document.getElementById('servicePrice').addEventListener('input', function() {
+    const amount = parseFloat(this.value) || 0;
+    const fee = calculateFees(amount);
+
+    document.getElementById('platformFee').textContent = fee.toLocaleString();
+    document.getElementById('totalAmount').textContent = (amount + fee).toLocaleString();
+});
+
+    </script>
 </body>
 </html>
-
